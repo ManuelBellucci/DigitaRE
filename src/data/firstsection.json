@@ -1,0 +1,44 @@
+{
+  "header": {
+    "title": "Lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. "
+  },
+  "cards": {
+    "first": {
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "svg": "./src/assets/firstcard.svg",
+      "alt": "first card image"
+    },
+    "second": {
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "svg": "./src/assets/secondcard.svg",
+      "alt": "second card image"
+    },
+    "third": {
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "svg": "./src/assets/thirdcard.svg",
+      "alt": "third card image"
+    },
+    "fourth": {
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "svg": "./src/assets/fourthcard.svg",
+      "alt": "fourth card image"
+    },
+    "fifth": {
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "svg": "./src/assets/fifthcard.svg",
+      "alt": "fifth card image"
+    },
+    "sixth": {
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "svg": "./src/assets/sixthcard.svg",
+      "alt": "sixth card image"
+    }
+  }
+}
