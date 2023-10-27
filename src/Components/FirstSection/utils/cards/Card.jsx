@@ -4,6 +4,7 @@ const Card = ({ svg, title, description, alt }) => {
       <img
         src={svg}
         alt={alt}
+        className='max-h-12'
       />
       <h3 className='text-3xl self-stretch font-bold'>
         {title}
