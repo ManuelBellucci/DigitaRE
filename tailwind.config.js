@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         primary: '#FFA800',
-        myGray: 'rgba(231,231,231,0.6)'
+        myGray: 'rgba(231,231,231,0.6)',
+        tag: '#1A365D',
+        readmore: '#728095'
       }
     }
   },
