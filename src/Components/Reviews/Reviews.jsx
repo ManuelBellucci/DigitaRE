@@ -5,7 +5,7 @@ const Reviews = () => {
   return (
     <ReviewsContainer>
       <div className='flex flex-col w-full items-center gap-14 shrink-0'>
-        <h3 className='flex-1 text-lg self-start'>{data.title}</h3>
+        <h3 className='flex-1 text-xl font-bold  self-start'>{data.title}</h3>
         <div className='flex gap-6 justify-center items-start self-stretch'>
           <Card
             author={data.first.author}
