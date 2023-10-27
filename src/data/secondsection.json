@@ -1,0 +1,12 @@
+{
+    "title": "Lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl. Nulla f acilis iaculis nisl, nec aliquam nisl. Nulla Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, alias accusantium necessitatibus illo facilis repellat.",
+    "image": {
+        "src": "/src/assets/secondsection.svg",
+        "alt": "Second Section Image"
+    },
+    "button": {
+        "href": "#",
+        "text": "Lorem ipsum"
+    }
+}
