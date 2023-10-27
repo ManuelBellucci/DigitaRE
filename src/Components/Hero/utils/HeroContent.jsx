@@ -3,7 +3,7 @@ const HeroContent = ({ title, gradientPhrase, title2, subtitle }) => {
     <div className='w-full h-[90vh] grid place-content-center gap-6'>
       <h1 className='max-w-[675px] text-6xl font-medium'>
         {title}
-        <span className='block font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#9DE8EE] to-[#FA7C0B]'>
+        <span className='block font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#FD782850] to-[#FA484F]'>
           {gradientPhrase}
         </span>
         {title2}

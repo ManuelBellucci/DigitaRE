@@ -7,7 +7,7 @@ const NavLinks = ({ blogPath }) => {
         <li>
           <a
             href={blogPath}
-            className='block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFA800] transition-all ease-in md:p-0'
+            className='block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary transition-all ease-in md:p-0'
           >
             Blog
           </a>
