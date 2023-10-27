@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#FFA800'
+        primary: '#FFA800',
+        myGray: 'rgba(231,231,231,0.6)'
       }
     }
   },
