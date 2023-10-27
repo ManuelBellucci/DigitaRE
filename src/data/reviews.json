@@ -1,0 +1,27 @@
+{
+    "title": "Hear what our clients have to say",
+    "first": {
+        "profilePicSrc":"https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg",
+        "author": "John Doe",
+        "business": "Doe's Real Estate",
+        "content": "Very happy of work with Manu lorem ipsum dolor sit amet, thank you Manuel!"
+    },
+    "second": {
+        "profilePicSrc":"https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg",
+        "author": "John Doe",
+        "business": "Doe's Real Estate",
+        "content": "Very happy of work with Manu lorem ipsum dolor sit amet, thank you Manuel!"
+    },
+    "third": {
+        "profilePicSrc":"https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg",
+        "author": "John Doe",
+        "business": "Doe's Real Estate",
+        "content": "Very happy of work with Manu lorem ipsum dolor sit amet, thank you Manuel!"
+    },
+    "fourth": {
+        "profilePicSrc":"https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg",
+        "author": "John Doe",
+        "business": "Doe's Real Estate",
+        "content": "Very happy of work with Manu lorem ipsum dolor sit amet, thank you Manuel!"
+    }
+}
