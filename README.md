@@ -1,8 +1,28 @@
-# React + Vite
+# Epicode Capstone Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Landing page con lo scopo di vendere servizi di web development ad agenti immobiliari, offrendo loro un efficace sviluppo di landing pages commerciali per acquisire clienti. Il sito avrà una sezione blog dove l'admin del sito (io) potrà postare dei blogposts, sicuramente a scopo persuasivo, e il potenziale lead oltre che leggerli gli potrà commentare.
 
-Currently, two official plugins are available:
+### Tecnologie usate:
+- Frontend:
+    - Vite
+    - React
+    - TailwindCSS
+    - Figma (prototipo e design)
+    - ...
+- Backend: 
+    - Express
+    - MongoDB
+    - Mongoose
+    - ...
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Linter
+    - StandardJS
+
+- Testing
+    - Jest
+    - Supertest
+
+- BD
+    - MongoDB Atlas
+    - Firebase
+    - ...
