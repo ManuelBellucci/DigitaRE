@@ -13,7 +13,7 @@ const Nav = () => {
           id='navbar-default'
         >
           <NavLinks
-            blogPath='/'
+            blogPath='/blog'
           />
         </div>
       </div>

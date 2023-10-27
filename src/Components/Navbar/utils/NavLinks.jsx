@@ -1,3 +1,5 @@
+import CTAButton from '../../commons/CTAButton'
+
 const NavLinks = ({ blogPath }) => {
   return (
     <>
@@ -11,9 +13,7 @@ const NavLinks = ({ blogPath }) => {
           </a>
         </li>
         <li>
-          <a href='#contatti' className='border border-[#FFA800] px-6 py-[10px] rounded-3xl hover:bg-[#FFA800] transition-all ease-in'>
-            CONTATTI
-          </a>
+          <CTAButton href='#contatti' text='CONTATTI' />
         </li>
       </ul>
     </>
