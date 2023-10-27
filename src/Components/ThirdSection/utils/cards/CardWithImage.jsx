@@ -1,7 +1,7 @@
 import Readmore from './Readmore'
 import Tag from './Tag'
 
-const CardWithImage = ({ tagText, title, src }) => {
+const CardWithImage = ({ tagText, title, src, href }) => {
   return (
     <div className='flex flex-col p-6 items-start gap-6 border border-white rounded w-full'>
 
@@ -11,7 +11,7 @@ const CardWithImage = ({ tagText, title, src }) => {
         <Tag tagText={tagText} />
         <h3 className='text-2xl font-bold'>{title}</h3>
         <div className='flex gap-2 items-center'>
-          <Readmore />
+          <Readmore href={href} />
         </div>
       </div>
     </div>
