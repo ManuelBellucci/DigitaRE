@@ -8,7 +8,7 @@ const Card = ({ svg, title, description, alt }) => {
       <h3 className='text-3xl self-stretch font-bold'>
         {title}
       </h3>
-      <div className='color-[rgba(255, 255, 255, 0.60)] text-sm self-stretch'>
+      <div className='text-myGray text-sm self-stretch'>
         {description}
       </div>
     </div>

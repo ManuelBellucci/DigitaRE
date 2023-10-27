@@ -4,7 +4,7 @@ const FirstSectionHeader = ({ title, description }) => {
       <h2 className='self-stretch text-center text-[40px] font-bold'>
         {title}
       </h2>
-      <p className='flex-1 text-[rgba(231,231,231,0.6)] text-center'>
+      <p className='flex-1 text-myGray text-center'>
         {description}
       </p>
     </div>
