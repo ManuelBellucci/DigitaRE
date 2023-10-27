@@ -3,7 +3,7 @@ import Tag from './Tag'
 
 const CardWithImage = ({ tagText, title, src, href }) => {
   return (
-    <div className='flex flex-col p-6 items-start gap-6 border border-white rounded w-full'>
+    <div className='flex flex-col p-6 items-start gap-6 border border-white rounded w-full hover:bg-myGray transition-all ease-in hover:text-black group'>
 
       <img src={src} alt={src} className='self-center object-cover rounded' />
 
