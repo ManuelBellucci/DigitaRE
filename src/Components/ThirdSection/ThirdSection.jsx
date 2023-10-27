@@ -17,31 +17,37 @@ const ThirdSection = () => {
         <div className='flex flex-col items-center gap-8 flex-1'>
           <CardWithImage
             tagText={data.cards.withImage.first.tagText}
-            title='title'
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png'
+            title={data.cards.withImage.first.title}
+            src={data.cards.withImage.first.src}
+            href={data.cards.withImage.first.href}
           />
           <CardWithoutImage
             tagText={data.cards.withoutImage.first.tagText}
-            title='title'
+            title={data.cards.withoutImage.first.title}
+            href={data.cards.withoutImage.first.href}
           />
           <CardWithoutImage
             tagText={data.cards.withoutImage.second.tagText}
-            title='title'
+            title={data.cards.withoutImage.second.title}
+            href={data.cards.withoutImage.second.href}
           />
         </div>
         <div className='flex flex-col items-center gap-8 flex-1'>
           <CardWithoutImage
             tagText={data.cards.withoutImage.third.tagText}
-            title='title'
+            title={data.cards.withoutImage.third.title}
+            href={data.cards.withoutImage.third.href}
           />
           <CardWithImage
             tagText={data.cards.withImage.second.tagText}
-            title='title'
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png'
+            title={data.cards.withImage.second.title}
+            src={data.cards.withImage.second.src}
+            href={data.cards.withImage.second.href}
           />
           <CardWithoutImage
             tagText={data.cards.withoutImage.fourth.tagText}
-            title='title'
+            title={data.cards.withoutImage.fourth.title}
+            href={data.cards.withoutImage.fourth.href}
           />
         </div>
       </SubsectionsContainer>
