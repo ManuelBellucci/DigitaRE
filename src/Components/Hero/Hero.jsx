@@ -1,6 +1,6 @@
 import Nav from '../Navbar/Navbar.jsx'
 import HeroContent from './utils/HeroContent.jsx'
-import HeroContainer from './utils/HeroContainer.jsx'
+import HeroContainer from './utils/containers/HeroContainer.jsx'
 import data from '../../data/hero.json'
 
 const Hero = () => {

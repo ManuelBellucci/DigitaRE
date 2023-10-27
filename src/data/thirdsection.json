@@ -1,0 +1,44 @@
+{
+    "title": "Title",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui nemo eveniet, velit veritatis aspernatur perferendis quasi sunt quo eos sed.",
+    "button": {
+        "href": "#",
+        "text": "Text"
+    },
+    "cards": {
+        "withImage": {
+            "first": {
+                "tagText": "Tag",
+                "title": "Title",
+                "src": "#"
+            },
+            "second": {
+                "tagText": "Tag",
+                "title": "Title",
+                "src": "#"
+            }
+        },
+        "withoutImage": {
+            "first": {
+                "tagText": "Tag",
+                "title": "Title",
+                "href": "#"
+            },
+            "second": {
+                "tagText": "Tag",
+                "title": "Title",
+                "href": "#"
+            },
+            "third": {
+                "tagText": "Tag",
+                "title": "Title",
+                "href": "#"
+            },
+            "fourth": {
+                "tagText": "Tag",
+                "title": "Title",
+                "href": "#"
+        }
+        }
+    }
+}

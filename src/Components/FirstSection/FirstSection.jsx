@@ -1,6 +1,6 @@
-import CardContainer from './utils/CardContainer'
-import Card from './utils/Card'
-import FirstSectionContainer from './utils/FirstSectionContainer'
+import CardContainer from './utils/cards/CardContainer'
+import Card from './utils/cards/Card'
+import FirstSectionContainer from './utils/containers/FirstSectionContainer'
 import FirstSectionHeader from './utils/FirstSectionHeader'
 import data from '../../data/firstsection.json'
 
