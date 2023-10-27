@@ -22,7 +22,7 @@
     - Jest
     - Supertest
 
-- BD
+- DB
     - MongoDB Atlas
     - Firebase
     - ...
