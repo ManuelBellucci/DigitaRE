@@ -4,7 +4,7 @@ import data from '../../data/secondsection.json'
 
 const SecondSection = () => {
   return (
-    <section className='bg-black w-full h-[596px] shrink-0 grid grid-cols-1 md:grid-cols-2'>
+    <section className='bg-black w-full h-[680px] md:h-[596px] shrink-0 grid grid-cols-1 md:grid-cols-2'>
       <div className='flex self-center justify-center'>
         <img
           src={data.image.src}
