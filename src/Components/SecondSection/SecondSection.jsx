@@ -9,7 +9,7 @@ const SecondSection = () => {
         <img
           src={data.image.src}
           alt={data.image.alt}
-          className='max-h-56 md:max-h-72 lg:max-h-96'
+          className='max-h-72 lg:max-h-96'
         />
       </div>
       <div className='flex flex-col self-center lg:w-[70%] items-start gap-4 md:gap-6 lg:gap-8 px-6 md:px-0'>
