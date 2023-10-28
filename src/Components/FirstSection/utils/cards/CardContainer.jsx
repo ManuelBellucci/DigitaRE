@@ -1,6 +1,6 @@
 const CardContainer = ({ children }) => {
   return (
-    <div className='flex items-start gap-[32px] self-stretch'>
+    <div className='grid lg:grid-cols-3 grid-cols-1 items-start gap-[32px] self-stretch'>
       {children}
     </div>
   )

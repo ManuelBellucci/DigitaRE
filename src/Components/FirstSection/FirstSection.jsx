@@ -12,7 +12,7 @@ const FirstSection = () => {
   const cardData2 = [fourth, fifth, sixth]
 
   return (
-    <section className='bg-[#110F0F] flex w-full px-[70px] pt-20 pb-[70px] justify-center items-center'>
+    <section className='bg-[#110F0F] flex w-full px-10 lg:px-[70px] pt-20 pb-[70px] justify-center items-center'>
       <FirstSectionContainer>
         <FirstSectionHeader
           title={title}

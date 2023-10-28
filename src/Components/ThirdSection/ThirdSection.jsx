@@ -10,7 +10,7 @@ const ThirdSection = () => {
     <ThirdSectionContainer>
       <SubsectionsContainer>
         <div className='flex flex-col w-[25%] items-start gap-3 md:gap-5 lg:gap-8 shrink-0'>
-          <div className='self-stretch text-xl md:text-2xl lg:text-4xl font-bold'>{data.title}</div>
+          <div className='self-stretch text-3xl md:text-4xl lg:text-5xl font-bold'>{data.title}</div>
           <div className='flex-1 text-myGray text-sm md:text-md lg:text-lg'>{data.description}</div>
           <CTAButton href={data.button.href} text={data.button.text} />
         </div>
