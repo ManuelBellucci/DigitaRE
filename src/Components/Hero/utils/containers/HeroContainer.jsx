@@ -1,6 +1,8 @@
 const HeroContainer = ({ children }) => {
   return (
-    <section className='px-16 bg-[url(/src/assets/shaders.svg)]'>
+    <section
+      className='px-16 bg-[url(/src/assets/shaders.svg)] bg-no-repeat bg-cover'
+    >
       {children}
     </section>
   )
