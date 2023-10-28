@@ -1,42 +1,42 @@
 {
   "header": {
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. "
+    "title": "I MOTIVI PER CUI DOVRESTI ESSERE ONLINE",
+    "description": "Ad oggi il 90% delle persone che cerca un professionista lo fa online. Se non sei presente online, non esisti. E' molto semplice. Con me puoi farlo in modo semplice e veloce. Progettiamo landing page per professionisti che vogliono essere al giorno con i metodi di acquisizione meno invasivi e ricevere richieste di consulenza da clienti realmente interessati al loro servizio. Ora ti spiego come funziona. Dovresti avere una landing page perchè..."
   },
   "cards": {
     "first": {
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "title": "AUMENTI LE CONSULENZE.",
+      "description": "Ricevi in tempo reale richieste di consulenza di clienti realmente interessati. Sono anch'io un consulente immobiliare, e so cosa vuoldire sbattersi a fare centinaia di telefonate per trovare 3 clienti di cui chiudi forse 2",
       "svg": "./src/assets/svgph.png",
       "alt": "first card image"
     },
     "second": {
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "title": "AUMENTI GLI INCARICHI.",
+      "description": "Le valutazioni di altà qualità che fisserai con le 'leads' ti permetteranno di aumentare il numero di incarichi notevolmente. Sarai in grado di selezionare i clienti che vuoi seguire, e non quelli che puoi.", 
       "svg": "./src/assets/svgph.png",
       "alt": "second card image"
     },
     "third": {
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "title": "AUMENTI IL FATTURATO.",
+      "description": "Piu' incarichi, più vendite, sembra scontato ma potrebbe non esserlo. Con un flusso costante di clienti potrai concentrarti sulla vera attività di vendita e automatizzare il processo di acquisizione clienti.",
       "svg": "./src/assets/svgph.png",
       "alt": "third card image"
     },
     "fourth": {
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "title": "VINCI TEMPO.",
+      "description": "Non tutto è lavoro e soldi. Il tempo è la risorsa più preziosa che abbiamo. Con noi potrai dedicare più tempo a te stesso e alla tua famiglia. Con un efficace metodo di acquisizione clienti, verrai in ufficio solo per chiudere i contratti.",
       "svg": "./src/assets/svgph.png",
       "alt": "fourth card image"
     },
     "fifth": {
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "title": "AUMENTI I PROFITTI.",
+      "description": "Più tempo, più incarichi, più vendite, più consulenze. I profitti aumenteranno in modo esponenziale. Non è magia, è semplicemente un metodo di acquisizione clienti che funziona.",
       "svg": "./src/assets/svgph.png",
       "alt": "fifth card image"
     },
     "sixth": {
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint quae laudantium harum est qui nihil nobis? Nesciunt, maxime quas! Lorem ipsum dolor sit amet. ",
+      "title": "AVRAI LA LANDING PERFETTA",
+      "description": "Essere online con una bella immagine e un sito web professionale ti permetterà di aumentare la tua autorevolezza e credibilità. I clienti ti vedranno come un professionista serio e affidabile. Non solo si tratta di 'stare online', ma di come si fa.",
       "svg": "./src/assets/svgph.png",
       "alt": "sixth card image"
     }
