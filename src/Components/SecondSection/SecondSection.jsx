@@ -4,12 +4,12 @@ import data from '../../data/secondsection.json'
 
 const SecondSection = () => {
   return (
-    <section className='bg-black w-full h-[680px] md:h-[596px] shrink-0 grid grid-cols-1 md:grid-cols-2'>
-      <div className='flex self-center justify-center'>
+    <section className='bg-black w-full h-min grid grid-cols-2'>
+      <div className='flex self-center justify-center h-[600px] lg:h-full'>
         <img
           src={data.image.src}
           alt={data.image.alt}
-          className='max-h-72 lg:max-h-96'
+          className='h-full object-contain'
         />
       </div>
       <div className='flex flex-col self-center lg:w-[70%] items-start gap-4 md:gap-6 lg:gap-8 px-6 md:px-0'>
