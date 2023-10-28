@@ -9,12 +9,12 @@ const ThirdSection = () => {
   return (
     <ThirdSectionContainer>
       <SubsectionsContainer>
-        <div className='flex flex-col w-[412px] items-start gap-8 shrink-0'>
-          <div className='self-stretch text-4xl font-bold'>{data.title}</div>
-          <div className='flex-1 text-myGray text-lg'>{data.description}</div>
+        <div className='flex flex-col w-[25%] items-start gap-3 md:gap-5 lg:gap-8 shrink-0'>
+          <div className='self-stretch text-xl md:text-2xl lg:text-4xl font-bold'>{data.title}</div>
+          <div className='flex-1 text-myGray text-sm md:text-md lg:text-lg'>{data.description}</div>
           <CTAButton href={data.button.href} text={data.button.text} />
         </div>
-        <div className='flex flex-col items-center gap-8 flex-1'>
+        <div className='flex flex-col items-center gap-2 md:gap-5 lg:gap-8 flex-1'>
           <CardWithImage
             tagText={data.cards.withImage.first.tagText}
             title={data.cards.withImage.first.title}
@@ -32,7 +32,7 @@ const ThirdSection = () => {
             href={data.cards.withoutImage.second.href}
           />
         </div>
-        <div className='flex flex-col items-center gap-8 flex-1'>
+        <div className='flex flex-col items-center gap-2 md:gap-5 lg:gap-8 flex-1'>
           <CardWithoutImage
             tagText={data.cards.withoutImage.third.tagText}
             title={data.cards.withoutImage.third.title}
