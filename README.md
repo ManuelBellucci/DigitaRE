@@ -6,9 +6,9 @@
 - Frontend:
     - Vite
     - React
+    - React-Router
     - TailwindCSS
     - Figma (prototipo e design)
-    - ...
 - Backend: 
     - Express
     - MongoDB
