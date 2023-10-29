@@ -6,7 +6,7 @@ import { Slide } from 'react-awesome-reveal'
 const Reviews = () => {
   return (
     <ReviewsContainer>
-      <Slide direction='right'>
+      <Slide direction='right' triggerOnce>
         <div className='flex flex-col w-full items-center gap-14 shrink-0'>
           <h3 className='flex-1 text-xl font-bold  self-start'>{data.title}</h3>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-start self-stretch'>
