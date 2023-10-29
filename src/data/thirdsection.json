@@ -3,7 +3,7 @@
     "description": "Questo è il mio Blog, dove parlo del nostro mestiere e la sua evoluzione. Puoi registrarti alla Newsletter per non perderti le novità.",
     "button": {
         "href": "/blog",
-        "text": "Altri post"
+        "text": "Scopri il Blog"
     },
     "cards": {
         "withImage": {
