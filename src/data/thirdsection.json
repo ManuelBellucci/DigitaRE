@@ -1,9 +1,9 @@
 {
     "title": "Blog",
-    "description": "Questo è il mio Blog, dove parlo del nostro mestiere e la sua evoluzione. Puoi registrarti alla Newsletter per non perderti le novità. Parlo di come si sta evolvendo questo settore, delle ultime tecnologie applicabili, di vendita... insomma, di tutto quello che riguarda il nostro lavoro a giorno d'oggi.",
+    "description": "Questo è il mio Blog, dove parlo del nostro mestiere e la sua evoluzione. Puoi registrarti alla Newsletter per non perderti le novità.",
     "button": {
         "href": "/blog",
-        "text": "Scopri il Blog"
+        "text": "Altri post"
     },
     "cards": {
         "withImage": {
