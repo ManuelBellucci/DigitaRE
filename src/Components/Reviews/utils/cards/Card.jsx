@@ -8,7 +8,7 @@ const Card = ({ profilePicSrc, author, business, content }) => {
           <span>{business}</span>
         </div>
       </div>
-      <div className='text-myGray'>{content}</div>
+      <div className='text-myGray text-justify'>{content}</div>
     </div>
   )
 }

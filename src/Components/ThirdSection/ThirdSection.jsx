@@ -13,11 +13,11 @@ const ThirdSection = () => {
         <SubsectionsContainer>
           <div className='flex flex-col w-full sm:w-[25%] items-start gap-6 md:gap-9 lg:gap-10 shrink-0'>
             <div className='self-stretch text-3xl md:text-4xl lg:text-5xl font-bold'>{data.title}</div>
-            <div className='flex-1 text-myGray text-sm md:text-md lg:text-lg'>{data.description}</div>
+            <div className='text-myGray text-sm md:text-md lg:text-lg text-justify'>{data.description}</div>
             <CTAButton href={data.button.href} text={data.button.text} />
           </div>
           <Zoom triggerOnce cascade>
-            <div className='flex flex-col w-full items-center gap-2 md:gap-5 lg:gap-8 flex-1'>
+            <div className='flex flex-col gap-2 md:gap-5 lg:gap-8 flex-1'>
               <CardWithImage
                 tagText={data.cards.withImage.first.tagText}
                 title={data.cards.withImage.first.title}
