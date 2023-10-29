@@ -10,16 +10,16 @@ function App () {
   return (
     <>
       <Hero />
-      <Fade>
+      <Fade triggerOnce>
         <FirstSection />
       </Fade>
-      <Fade>
+      <Fade triggerOnce>
         <SecondSection />
       </Fade>
-      <Fade>
+      <Fade triggerOnce>
         <ThirdSection />
       </Fade>
-      <Fade>
+      <Fade triggerOnce>
         <Reviews />
       </Fade>
     </>
