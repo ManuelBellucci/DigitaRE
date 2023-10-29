@@ -4,7 +4,7 @@ const Logo = () => {
       <img
         className='h-8 mr-3'
         alt='Logo'
-        src='./src/assets/logo.svg'
+        src='./public/assets/logo.svg'
       />
       <span className='self-center text-2xl font-semibold whitespace-nowrap hover:text-primary transition-all ease-in'>
         DigitaRE

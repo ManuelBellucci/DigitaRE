@@ -2,7 +2,7 @@
     "title": "E chi ti sta dicendo tutte queste belle cose?",
     "description": "Sono Manuel Bellucci, consulente immobiliare a Bologna e programmatore. Sono un ragazzo di 22 anni con maturata esperienza nel marketing immobiliare e non, avendo creato dozzine di progetti e portato avanti campagne aziendali da oltre 7 anni. Conosco benissimo le dinamiche del settore immobiliare, e a differenza di tante Web Agency, giocho in casa. Ho sviluppato questo metodo a base di studio e sperimentazione, partendo da aver sofferto i stessi problemi che tu stai soffrendo ora. Sono qui per aiutarti a risolverli.",
     "image": {
-        "src": "/src/assets/persona.png",
+        "src": "/public/assets/persona.png",
         "alt": "Second Section Image"
     },
     "button": {
