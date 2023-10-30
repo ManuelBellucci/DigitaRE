@@ -4,7 +4,7 @@ import SecondSection from './Components/SecondSection/SecondSection'
 import ThirdSection from './Components/ThirdSection/ThirdSection'
 import Reviews from './Components/Reviews/Reviews'
 import { Fade } from 'react-awesome-reveal'
-
+import { FloatButton } from 'antd'
 function App () {
   return (
     <>
@@ -21,6 +21,7 @@ function App () {
       <Fade triggerOnce>
         <Reviews />
       </Fade>
+      <FloatButton.BackTop className='hover:bg-myGray' />
     </>
   )
 }
