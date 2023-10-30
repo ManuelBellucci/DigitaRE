@@ -2,6 +2,7 @@ const Card = ({ svg, title, description, alt }) => {
   return (
     <div className=' flex flex-col items-start gap-3 flex-1 self-stretch p-5 border border-white rounded-[10px]'>
       <img
+        loading='lazy'
         src={svg}
         alt={alt}
         className='max-h-12'

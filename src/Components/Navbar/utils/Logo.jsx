@@ -2,6 +2,7 @@ const Logo = () => {
   return (
     <a href='/' className='flex items-center'>
       <img
+        loading='lazy'
         className='h-8 mr-3'
         alt='Logo'
         src='./public/assets/logo.svg'
