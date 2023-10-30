@@ -3,7 +3,7 @@ import CTAButton from '../../commons/CTAButton'
 const NavLinks = ({ blogPath }) => {
   return (
     <>
-      <ul className='font-medium flex flex-col items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0'>
+      <ul className='font-medium flex flex-col items-center p-4 md:p-0 mt-4 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0'>
         <li>
           <a
             href={blogPath}
