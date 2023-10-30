@@ -1,4 +1,4 @@
-const HamburgerSVG = () => {
+const Hamburger = () => {
   return (
     <button
       data-collapse-toggle='navbar-default'
@@ -25,4 +25,4 @@ const HamburgerSVG = () => {
     </button>
   )
 }
-export default HamburgerSVG
+export default Hamburger
