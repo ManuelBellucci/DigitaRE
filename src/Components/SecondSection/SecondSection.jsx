@@ -7,7 +7,7 @@ const SecondSection = () => {
     <section className='bg-black w-full h-min grid grid-cols-2'>
       <div className='flex justify-center items-center h-[600px] md:h-[700px]'>
         <Slide triggerOnce>
-          <div className='bg-[url(/public/assets/persona.png)] bg-contain p-20 md:p-28 lg:p-52 border border-white rounded-full bg-no-repeat' />
+          <div className='bg-[url(/assets/persona.png)] bg-contain p-20 md:p-28 lg:p-52 border border-white rounded-full bg-no-repeat' />
         </Slide>
       </div>
       <Slide triggerOnce direction='right' className='flex self-center justify-center'>
