@@ -5,13 +5,9 @@ import { Slide } from 'react-awesome-reveal'
 const SecondSection = () => {
   return (
     <section className='bg-black w-full h-min grid grid-cols-2'>
-      <div className='flex self-center justify-center h-[800px] lg:h-full'>
+      <div className='flex justify-center items-center h-[600px] md:h-[700px]'>
         <Slide triggerOnce>
-          <img
-            src={data.image.src}
-            alt={data.image.alt}
-            className='h-full object-contain'
-          />
+          <div className='bg-[url(/public/assets/persona.png)] bg-contain p-20 md:p-28 lg:p-52 border border-white rounded-full bg-no-repeat' />
         </Slide>
       </div>
       <Slide triggerOnce direction='right' className='flex self-center justify-center'>
