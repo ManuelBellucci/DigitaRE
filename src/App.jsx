@@ -1,8 +1,8 @@
-import Hero from './Components/Hero/Hero.jsx'
-import FirstSection from './Components/FirstSection/FirstSection'
-import SecondSection from './Components/SecondSection/SecondSection'
-import ThirdSection from './Components/ThirdSection/ThirdSection'
-import Reviews from './Components/Reviews/Reviews'
+import Hero from './Components/home/Hero/Hero.jsx'
+import FirstSection from './Components/home/FirstSection/FirstSection'
+import SecondSection from './Components/home/SecondSection/SecondSection'
+import ThirdSection from './Components/home/ThirdSection/ThirdSection'
+import Reviews from './Components/home/Reviews/Reviews'
 import { Fade } from 'react-awesome-reveal'
 import { FloatButton } from 'antd'
 function App () {

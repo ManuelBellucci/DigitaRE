@@ -1,9 +1,9 @@
-import CTAButton from '../commons/CTAButton'
+import CTAButton from '../../commons/CTAButton'
 import CardWithImage from './utils/cards/CardWithImage'
 import CardWithoutImage from './utils/cards/CardWithoutImage'
 import SubsectionsContainer from './utils/containers/SubsectionsContainer'
 import ThirdSectionContainer from './utils/containers/ThirdSectionContainer'
-import data from '../../data/thirdsection.json'
+import data from '../../../data/thirdsection.json'
 import { Slide, Zoom } from 'react-awesome-reveal'
 
 const ThirdSection = () => {
@@ -19,7 +19,7 @@ const ThirdSection = () => {
         <SubsectionsContainer>
           <div className='flex flex-col w-full sm:w-[25%] items-start gap-6 md:gap-9 lg:gap-10 shrink-0'>
             <div className='self-stretch text-3xl md:text-4xl lg:text-5xl font-bold'>{title}</div>
-            <div className='text-myGray text-sm md:text-md lg:text-lg text-justify'>{description}</div>
+            <div className='text-myGray text-sm md:text-base lg:text-lg text-justify'>{description}</div>
             <CTAButton href={href} text={text} />
           </div>
           <Zoom triggerOnce cascade>

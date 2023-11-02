@@ -1,6 +1,6 @@
 import ReviewsContainer from './utils/containers/ReviewsContainer'
 import Card from './utils/cards/Card'
-import data from '../../data/reviews.json'
+import data from '../../../data/reviews.json'
 import { Slide } from 'react-awesome-reveal'
 
 const Reviews = () => {

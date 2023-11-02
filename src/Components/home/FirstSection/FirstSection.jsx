@@ -2,7 +2,7 @@ import CardContainer from './utils/cards/CardContainer'
 import Card from './utils/cards/Card'
 import FirstSectionContainer from './utils/containers/FirstSectionContainer'
 import FirstSectionHeader from './utils/FirstSectionHeader'
-import data from '../../data/firstsection.json'
+import data from '../../../data/firstsection.json'
 import { Slide } from 'react-awesome-reveal'
 
 const FirstSection = () => {

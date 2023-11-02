@@ -1,4 +1,4 @@
-import CTAButton from '../../commons/CTAButton'
+import CTAButton from '../../../commons/CTAButton'
 
 const NavLinks = ({ blogPath }) => {
   return (
