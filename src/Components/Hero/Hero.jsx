@@ -4,14 +4,16 @@ import HeroContainer from './utils/containers/HeroContainer.jsx'
 import data from '../../data/hero.json'
 
 const Hero = () => {
+  const { title, gradientPhrase, title2, subtitle } = data
+
   return (
     <HeroContainer>
       <Nav />
       <HeroContent
-        title={data.title}
-        gradientPhrase={data.gradientPhrase}
-        title2={data.title2}
-        subtitle={data.subtitle}
+        title={title}
+        gradientPhrase={gradientPhrase}
+        title2={title2}
+        subtitle={subtitle}
       />
     </HeroContainer>
   )
