@@ -5,6 +5,7 @@ import ThirdSection from './Components/home/ThirdSection/ThirdSection'
 import Reviews from './Components/home/Reviews/Reviews'
 import { Fade } from 'react-awesome-reveal'
 import { FloatButton } from 'antd'
+import Contact from './Components/home/Contact/Contact.jsx'
 function App () {
   return (
     <>
@@ -20,6 +21,9 @@ function App () {
       </Fade>
       <Fade triggerOnce>
         <Reviews />
+      </Fade>
+      <Fade triggerOnce>
+        <Contact />
       </Fade>
       <FloatButton.BackTop className='hover:bg-myGray' />
     </>
