@@ -1,46 +1,46 @@
 {
-    "title": "Blog",
-    "description": "Questo è il mio Blog, dove parlo del nostro mestiere e la sua evoluzione. Puoi registrarti alla Newsletter per non perderti le novità.",
-    "button": {
-        "href": "/blog",
-        "text": "Scopri il Blog"
+  "title": "Blog",
+  "description": "Questo è il mio Blog, dove parlo del nostro mestiere e la sua evoluzione. Puoi registrarti alla Newsletter per non perderti le novità.",
+  "button": {
+    "href": "/blog",
+    "text": "Scopri il Blog"
+  },
+  "cards": {
+    "withImage": {
+      "first": {
+        "tagText": "Lead Generation",
+        "title": "Cos'è la Lead Generation?",
+        "src": "public/assets/placeholder.png",
+        "href": "#"
+      },
+      "second": {
+        "tagText": "Advertising",
+        "title": "Advertising nell'immobiliare",
+        "src": "public/assets/placeholder.png",
+        "href": "#"
+      }
     },
-    "cards": {
-        "withImage": {
-            "first": {
-                "tagText": "Lead Generation",
-                "title": "Cos'è la Lead Generation?",
-                "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png",
-                "href": "#"
-            },
-            "second": {
-                "tagText": "Advertising",
-                "title": "Advertising nell'immobiliare",
-                "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png",
-                "href": "#"
-            }
-        },
-        "withoutImage": {
-            "first": {
-                "tagText": "Vendita",
-                "title": "I funnel di vendita",
-                "href": "#"
-            },
-            "second": {
-                "tagText": "Lead Generation", 
-                "title": "Lead generation per l'immobiliare",
-                "href": "#"
-            },
-            "third": {
-                "tagText": "Acquisizione",
-                "title": "Il procacciamento tradizionale è morto?",
-                "href": "#"
-            },
-            "fourth": {
-                "tagText": "Vendita",
-                "title": "Come lavorano i Top Seller?",
-                "href": "#"
-        }
-        }
+    "withoutImage": {
+      "first": {
+        "tagText": "Vendita",
+        "title": "I funnel di vendita",
+        "href": "#"
+      },
+      "second": {
+        "tagText": "Lead Generation",
+        "title": "Lead generation per l'immobiliare",
+        "href": "#"
+      },
+      "third": {
+        "tagText": "Acquisizione",
+        "title": "Il procacciamento tradizionale è morto?",
+        "href": "#"
+      },
+      "fourth": {
+        "tagText": "Vendita",
+        "title": "Come lavorano i Top Seller?",
+        "href": "#"
+      }
     }
+  }
 }
