@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import ReviewsContainer from './utils/containers/ReviewsContainer'
 import Card from './utils/cards/Card'
 import data from '../../../data/reviews.json'
@@ -6,37 +7,33 @@ import { Slide } from 'react-awesome-reveal'
 const Reviews = () => {
   const { title } = data
   const { first, second, third, fourth } = data
+  const reviews = [first, second, third, fourth]
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      // Increment currentIndex, and loop back to 0 if it exceeds the length
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length)
+    }, 5000)
+
+    return () => {
+      // Cleanup the interval on component unmount
+      clearInterval(intervalId)
+    }
+  }, [currentIndex, reviews.length])
+
   return (
     <ReviewsContainer>
       <Slide direction='right' triggerOnce>
         <div className='flex flex-col w-full items-center gap-14 shrink-0'>
-          <h3 className='flex-1 text-xl font-bold  self-start'>{title}</h3>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center items-start self-stretch'>
-            <Card
-              author={first.author}
-              business={first.business}
-              content={first.content}
-              profilePicSrc={first.profilePicSrc}
-            />
-            <Card
-              author={second.author}
-              business={second.business}
-              content={second.content}
-              profilePicSrc={second.profilePicSrc}
-            />
-            <Card
-              author={third.author}
-              business={third.business}
-              content={third.content}
-              profilePicSrc={third.profilePicSrc}
-            />
-            <Card
-              author={fourth.author}
-              business={fourth.business}
-              content={fourth.content}
-              profilePicSrc={fourth.profilePicSrc}
-            />
-          </div>
+          <h3 className='flex-1 text-xl font-bold self-start'>{title}</h3>
+          <Card
+            author={reviews[currentIndex].author}
+            business={reviews[currentIndex].business}
+            content={reviews[currentIndex].content}
+            profilePicSrc={reviews[currentIndex].profilePicSrc}
+          />
         </div>
       </Slide>
     </ReviewsContainer>
