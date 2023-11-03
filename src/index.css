@@ -18,3 +18,23 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFA800;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FD7828 ;
+}
