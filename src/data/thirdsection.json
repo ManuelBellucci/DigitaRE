@@ -10,13 +10,13 @@
       "first": {
         "tagText": "Lead Generation",
         "title": "Cos'è la Lead Generation?",
-        "src": "public/assets/placeholder.png",
+        "src": "/assets/placeholder.png",
         "href": "#"
       },
       "second": {
         "tagText": "Advertising",
         "title": "Advertising nell'immobiliare",
-        "src": "public/assets/placeholder.png",
+        "src": "/assets/placeholder.png",
         "href": "#"
       }
     },
