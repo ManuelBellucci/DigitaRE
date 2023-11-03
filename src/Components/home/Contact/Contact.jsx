@@ -60,7 +60,7 @@ const Contact = () => {
       className='bg-[#110F0F] flex w-full px-10 lg:px-[70px] pt-20 pb-[70px] justify-center items-center'
       id='contatti'
     >
-      <Slide triggerOnce>
+      <Slide triggerOnce direction='up'>
         <Form>
           <FormHeader title={title} subtitle={subtitle} />
           <div className='flex flex-col gap-4 flex-1 w-full max-w-lg self-center text-black'>
