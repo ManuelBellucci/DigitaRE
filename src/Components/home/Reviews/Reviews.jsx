@@ -13,12 +13,10 @@ const Reviews = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // Increment currentIndex, and loop back to 0 if it exceeds the length
       setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length)
-    }, 5000)
+    }, 3000)
 
     return () => {
-      // Cleanup the interval on component unmount
       clearInterval(intervalId)
     }
   }, [currentIndex, reviews.length])
@@ -27,7 +25,9 @@ const Reviews = () => {
     <ReviewsContainer>
       <Slide direction='right' triggerOnce>
         <div className='flex flex-col w-full items-center gap-14 shrink-0'>
-          <h3 className='flex-1 text-xl font-bold self-start'>{title}</h3>
+          <h3 className='flex-1 text-xl md:text-2xl lg:text-3xl font-bold self-center'>
+            {title}
+          </h3>
           <Card
             author={reviews[currentIndex].author}
             business={reviews[currentIndex].business}
