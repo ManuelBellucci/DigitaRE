@@ -18,9 +18,17 @@ const ThirdSection = () => {
       <Slide triggerOnce>
         <SubsectionsContainer>
           <div className='flex flex-col w-full sm:w-[25%] items-start gap-6 md:gap-9 lg:gap-10 shrink-0'>
-            <div className='self-stretch text-3xl md:text-4xl lg:text-5xl font-bold'>{title}</div>
-            <div className='text-myGray text-sm md:text-base lg:text-lg text-justify'>{description}</div>
-            <CTAButton href={href} text={text} />
+            <div className='self-stretch text-3xl md:text-4xl lg:text-5xl font-bold'>
+              {title}
+            </div>
+            <div className='text-myGray text-sm md:text-base lg:text-lg text-justify'>
+              {description}
+            </div>
+            <CTAButton
+              href={href}
+              text={text}
+              className='text-base md:text-lg lg:text-xl'
+            />
           </div>
           <Zoom triggerOnce cascade>
             <div className='flex flex-col gap-2 md:gap-5 lg:gap-8 flex-1'>

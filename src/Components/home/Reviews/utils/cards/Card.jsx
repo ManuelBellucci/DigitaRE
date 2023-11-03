@@ -11,12 +11,16 @@ const Card = ({ profilePicSrc, author, business, content }) => {
           className='rounded-full h-12 w-12 max-h-12'
         />
         <div className='flex flex-col gap-1'>
-          <h4 className='font-bold'>{author}</h4>
-          <span>{business}</span>
-          <Rate disabled defaultValue={5} className='flex flex-nowrap text-sm' />
+          <h4 className='font-bold text-base md:text-lg lg:text-xl'>{author}</h4>
+          <span className='text-sm md:text-base lg:text-lg'>{business}</span>
+          <Rate
+            disabled
+            defaultValue={5}
+            className='flex flex-nowrap text-sm md:text-base lg:text-lg'
+          />
         </div>
       </div>
-      <div className='text-myGray text-justify overflow-hidden'>
+      <div className='text-myGray text-sm md:text-base lg:text-lg text-justify overflow-hidden'>
         {content}
       </div>
     </div>
