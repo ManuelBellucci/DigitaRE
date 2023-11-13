@@ -36,6 +36,7 @@ const ThirdSection = () => {
                 tagText={first.tagText}
                 title={first.title}
                 src={first.src}
+                alt={first.alt}
                 href={first.href}
               />
               <CardWithoutImage
@@ -59,6 +60,7 @@ const ThirdSection = () => {
                 tagText={second.tagText}
                 title={second.title}
                 src={second.src}
+                alt={second.alt}
                 href={second.href}
               />
               <CardWithoutImage

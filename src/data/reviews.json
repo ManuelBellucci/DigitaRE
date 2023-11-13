@@ -2,24 +2,28 @@
     "title": "Senti cosa dicono di me altri colleghi:",
     "first": {
         "profilePicSrc":"/assets/placeholder.png",
+        "alt": "Foto di Mario Rossi",
         "author": "Mario Rossi",
         "business": "Titolare di Rossi's Real Estate",
         "content": "Grazie a Manu ho raddopiato le mie vendite. Ricevendo richieste di valutazione sul computer, ho potuto ridistribuire il mio tempo e dedicarmi a ciò che conta veramente: la vendita. Grazie Manu!"
     },
     "second": {
         "profilePicSrc":"/assets/placeholder.png",
+        "alt": "Foto di Giuseppe Bianchi",
         "author": "Giuseppe Bianchi",
         "business": "Responsabile di BORK Immobiliare",
         "content": "Sono riuscito a quasi azzerare il tempo che dedico all'acquisizione. Il sito che ha costruito Manu e un vero e proprio consulente 24h."
     },
     "third": {
         "profilePicSrc":"/assets/placeholder.png",
+        "alt": "Foto di Alessandro Verdi",
         "author": "Alessandro Verdi",
         "business": "Consulente di PincoCasa Milano",
         "content": "Ho iniziato a lavorare con Manu da poco, ma già vedo i risultati. Il sito che ha costruito per me è molto bello e mi permette di arrivare a clienti che altrimenti non avrei mai raggiunto."
     },
     "fourth": {
         "profilePicSrc":"/assets/placeholder.png",
+        "alt": "Foto di Carlo Russo",
         "author": "Carlo Russo",
         "business": "Fondatore di CasaMia",
         "content": "Ho iniziato affidando a Manuel la gestione di un punto vendita. Dopo un anno gli ho dato in mano l'intero franchisee."

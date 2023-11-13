@@ -11,12 +11,14 @@
         "tagText": "Lead Generation",
         "title": "Cos'è la Lead Generation?",
         "src": "/assets/placeholder.png",
+        "alt": "Cos'è la Lead Generation?",
         "href": "#"
       },
       "second": {
         "tagText": "Advertising",
         "title": "Advertising nell'immobiliare",
         "src": "/assets/placeholder.png",
+        "alt": "Advertising nell'immobiliare",
         "href": "#"
       }
     },
