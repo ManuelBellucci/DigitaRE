@@ -5,8 +5,12 @@
 ### Tecnologie usate:
 - Frontend:
     - Vite
-    - React
-    - React-Router
+    - react
+    - react-dom
+    - react-router-dom
+    - react-awesome-reveal
+    - react-spring
+    - antd
     - TailwindCSS
     - Figma (prototipo e design)
 - Backend: 
