@@ -1,10 +1,11 @@
 {
   "name": "digitare",
   "private": true,
+  "type": "module",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "server": "nodemon backend/index.js",
+    "server": "nodemon backend/index.cjs",
     "build": "vite build",
     "lint": "npx standard --fix",
     "preview": "vite preview"

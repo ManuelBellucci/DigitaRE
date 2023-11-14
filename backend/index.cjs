@@ -2,7 +2,7 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const postRouter = require('./routes/posts')
+const postRouter = require('./routes/posts.cjs')
 
 // inizializzazione dell'app
 const app = express()

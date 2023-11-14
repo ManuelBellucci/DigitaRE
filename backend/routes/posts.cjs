@@ -2,7 +2,7 @@
 // imports
 const express = require('express')
 const router = express.Router()
-const Post = require('../models/postModel')
+const Post = require('../models/postModel.cjs')
 const mongoose = require('mongoose')
 
 // middlware gestione errori
