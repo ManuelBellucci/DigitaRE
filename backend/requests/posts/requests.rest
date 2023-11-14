@@ -1,0 +1,33 @@
+### ottenere tutti i post
+GET http://localhost:3001/api/posts HTTP/1.1
+Content-Type: application/json
+
+### ottenere un post
+GET http://localhost:3001/api/posts/6552af30a9f55b884cca5e8c HTTP/1.1
+Content-Type: application/json
+
+### creare un nuovo post
+POST http://localhost:3001/api/posts HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Come lavorano i Top Seller?",
+  "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl quis ultricies ultricies, nunc nisl ultricies nunc, quis ultric lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl quis ultricies ultricies, nunc nisl ultricies nunc, quis ultric lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl quis ultricies ultricies, nunc nisl ultricies nunc, quis ultric lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl quis ultricies ultricies, nunc nisl ultricies nunc, quis ultric", 
+  "tag": "vendita",
+  "readTime": {
+    "value": 5,
+    "unit": "minuti"
+  }
+}
+
+### eliminare un post
+DELETE http://localhost:3001/api/posts/6552ae73addfaa936c883bf4 HTTP/1.1
+
+
+### modificare un post
+PUT http://localhost:3001/api/posts/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  # proprietà da modificare (es. title, content, ecc...)
+}
