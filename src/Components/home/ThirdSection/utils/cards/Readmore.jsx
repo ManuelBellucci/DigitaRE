@@ -4,7 +4,7 @@ const Readmore = ({ href }) => {
       <a
         href={href}
         className='text-readmore text-center text-base md:text-lg lg:text-xl group-hover:text-blue-950 transition-all ease-in'
-      >Read more
+      >Leggi l'articolo
         <img
           loading='lazy'
           alt='read more'
