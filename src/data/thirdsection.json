@@ -4,45 +4,5 @@
   "button": {
     "href": "/blog",
     "text": "Scopri il Blog"
-  },
-  "cards": {
-    "withImage": {
-      "first": {
-        "tagText": "Lead Generation",
-        "title": "Cos'è la Lead Generation?",
-        "src": "/assets/placeholder.png",
-        "alt": "Cos'è la Lead Generation?",
-        "href": "#"
-      },
-      "second": {
-        "tagText": "Advertising",
-        "title": "Advertising nell'immobiliare",
-        "src": "/assets/placeholder.png",
-        "alt": "Advertising nell'immobiliare",
-        "href": "#"
-      }
-    },
-    "withoutImage": {
-      "first": {
-        "tagText": "Vendita",
-        "title": "I funnel di vendita",
-        "href": "#"
-      },
-      "second": {
-        "tagText": "Lead Generation",
-        "title": "Lead generation per l'immobiliare",
-        "href": "#"
-      },
-      "third": {
-        "tagText": "Acquisizione",
-        "title": "Il procacciamento tradizionale è morto?",
-        "href": "#"
-      },
-      "fourth": {
-        "tagText": "Vendita",
-        "title": "Come lavorano i Top Seller?",
-        "href": "#"
-      }
-    }
   }
 }
