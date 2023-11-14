@@ -1,3 +1,4 @@
+/* eslint-disable space-unary-ops */
 import CTAButton from '../../commons/CTAButton'
 import CardWithImage from './utils/cards/CardWithImage'
 import CardWithoutImage from './utils/cards/CardWithoutImage'
@@ -5,13 +6,43 @@ import SubsectionsContainer from './utils/containers/SubsectionsContainer'
 import ThirdSectionContainer from './utils/containers/ThirdSectionContainer'
 import data from '../../../data/thirdsection.json'
 import { Slide, Zoom } from 'react-awesome-reveal'
+import React, { useEffect, useState } from 'react'
 
 const ThirdSection = () => {
-  const { title, description, button, cards } = data
+  const { title, description, button } = data
   const { href, text } = button
-  const { withImage, withoutImage } = cards
-  const { first, second } = withImage
-  const { first: firstWithoutImage, second: secondWithoutImage, third: thirdWithoutImage, fourth: fourthWithoutImage } = withoutImage
+  const [featuredPosts, setFeaturedPosts] = useState([])
+
+  useEffect(() => {
+    const fetchFeaturedPosts = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/api/posts?isFeatured=true')
+        if (!response.ok) {
+          throw new Error('Errore nel recupero dei post')
+        }
+        const data = await response.json()
+        setFeaturedPosts(data)
+      } catch (error) {
+        console.error('Errore durante il recupero dei post:', error)
+      }
+    }
+
+    fetchFeaturedPosts()
+  }, [])
+
+  const renderCard = (post, index) => {
+    const props = {
+      tagText: post.tag,
+      title: post.title,
+      href: `/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`
+    }
+
+    if (index === 0 || index === 4) {
+      return <CardWithImage {...props} src={post.cover} alt='cover image' />
+    }
+
+    return <CardWithoutImage {...props} />
+  }
 
   return (
     <ThirdSectionContainer>
@@ -32,42 +63,22 @@ const ThirdSection = () => {
           </div>
           <Zoom triggerOnce cascade>
             <div className='flex flex-col gap-2 md:gap-5 lg:gap-8 flex-1'>
-              <CardWithImage
-                tagText={first.tagText}
-                title={first.title}
-                src={first.src}
-                alt={first.alt}
-                href={first.href}
-              />
-              <CardWithoutImage
-                tagText={firstWithoutImage.tagText}
-                title={firstWithoutImage.title}
-                href={firstWithoutImage.href}
-              />
-              <CardWithoutImage
-                tagText={secondWithoutImage.tagText}
-                title={secondWithoutImage.title}
-                href={secondWithoutImage.href}
-              />
+              {featuredPosts
+                .slice(0, 3)
+                .map((post, index) => (
+                  <React.Fragment key={post._id}>
+                    {renderCard(post, index)}
+                  </React.Fragment>
+                ))}
             </div>
             <div className='flex flex-col w-full items-center gap-2 md:gap-5 lg:gap-8 flex-1'>
-              <CardWithoutImage
-                tagText={thirdWithoutImage.tagText}
-                title={thirdWithoutImage.title}
-                href={thirdWithoutImage.href}
-              />
-              <CardWithImage
-                tagText={second.tagText}
-                title={second.title}
-                src={second.src}
-                alt={second.alt}
-                href={second.href}
-              />
-              <CardWithoutImage
-                tagText={fourthWithoutImage.tagText}
-                title={fourthWithoutImage.title}
-                href={fourthWithoutImage.href}
-              />
+              {featuredPosts
+                .slice(3, 6)
+                .map((post, index) => (
+                  <React.Fragment key={post._id}>
+                    {renderCard(post, index + 3)}
+                  </React.Fragment>
+                ))}
             </div>
           </Zoom>
         </SubsectionsContainer>
