@@ -11,12 +11,14 @@ const postSchema = new Schema({
   body: { type: String, required: true },
   date: { type: Date, default: Date.now },
   tag: { type: String, default: 'generic' },
-  cover: { type: String, default: 'https://picsum.photos/seed/picsum/40/40' },
+  cover: { type: String },
   readTime: {
     value: { type: Number },
     unit: { type: String }
   },
-  isFeatured: { type: Boolean, default: false }
+  isFeatured: { type: Boolean, default: false },
+  slug: { type: String, required: true, unique: true }
+
 })
 
 // model

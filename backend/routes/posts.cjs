@@ -33,7 +33,9 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ error: 'I parametri title e body sono obbligatori' })
     }
 
-    const post = new Post({ title, body, date, tag, cover, readTime })
+    const slug = title.toLowerCase().replace(/\s+/g, '-')
+
+    const post = new Post({ title, body, date, tag, cover, readTime, slug })
     const savedPost = await post.save()
 
     res.json(savedPost)
