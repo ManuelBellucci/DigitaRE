@@ -7,12 +7,15 @@ import { Fade } from 'react-awesome-reveal'
 import { FloatButton } from 'antd'
 import Contact from './Components/home/Contact/Contact'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import AllBlogs from './Components/blog/AllBlogs'
+import SingleBlog from './Components/blog/SingleBlog'
 
 function App () {
   return (
     <Router>
       <Routes>
-        <Route path='/blog' element={<h1>Blog DigitaRE</h1>} />
+        <Route path='/blog' element={<AllBlogs />} />
+        <Route path='/blog/:slug' element={<SingleBlog />} />
         <Route
           path='/'
           element={
