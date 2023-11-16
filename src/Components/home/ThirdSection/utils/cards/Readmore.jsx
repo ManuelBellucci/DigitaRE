@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
+
 const Readmore = ({ href }) => {
   return (
     <div className='flex gap-2 items-center'>
-      <a
-        href={href}
+      <Link
+        to={href}
         className='text-readmore text-center text-base md:text-lg lg:text-xl group-hover:text-blue-950 transition-all ease-in'
       >Leggi l'articolo
         <img
@@ -11,7 +13,7 @@ const Readmore = ({ href }) => {
           src='/assets/readmore.svg'
           className='inline px-1 transition-all ease-in'
         />
-      </a>
+      </Link>
     </div>
   )
 }
