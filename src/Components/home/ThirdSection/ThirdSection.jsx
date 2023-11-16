@@ -1,5 +1,4 @@
 /* eslint-disable space-unary-ops */
-import CTAButton from '../../commons/CTAButton'
 import CardWithImage from './utils/cards/CardWithImage'
 import CardWithoutImage from './utils/cards/CardWithoutImage'
 import SubsectionsContainer from './utils/containers/SubsectionsContainer'
@@ -7,6 +6,7 @@ import ThirdSectionContainer from './utils/containers/ThirdSectionContainer'
 import data from '../../../data/thirdsection.json'
 import { Slide, Zoom } from 'react-awesome-reveal'
 import React, { useEffect, useState } from 'react'
+import CTAButtonWithLink from '../../commons/CTAButtonWithLink'
 
 const ThirdSection = () => {
   const { title, description, button } = data
@@ -34,7 +34,12 @@ const ThirdSection = () => {
     const props = {
       tagText: post.tag,
       title: post.title,
-      href: `/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`
+      href: `/blog/${post.title
+        .toLowerCase()
+        .replace(/[^\w\s]/gi, '')
+        .replace(/\s+/g, '-')
+        .replace(/-{2,}/g, '')
+        .trim()}`
     }
 
     if (index === 0 || index === 4) {
@@ -55,7 +60,7 @@ const ThirdSection = () => {
             <div className='text-myGray text-sm md:text-base lg:text-lg text-justify'>
               {description}
             </div>
-            <CTAButton
+            <CTAButtonWithLink
               href={href}
               text={text}
               className='text-base md:text-lg lg:text-xl'
