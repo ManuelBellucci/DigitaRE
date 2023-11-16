@@ -2,7 +2,7 @@ import Hamburger from './utils/Hamburger'
 import Logo from './utils/Logo'
 import NavLinks from './utils/NavLinks'
 
-const Nav = ({ isBlogRoute }) => {
+const Nav = ({ isBlogRoute, isContactRoute }) => {
   return (
     <nav className='pt-4'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
@@ -14,7 +14,9 @@ const Nav = ({ isBlogRoute }) => {
         >
           <NavLinks
             blogPath='/blog'
+            contactPath='/contatti'
             isBlogRoute={isBlogRoute}
+            isContactRoute={isContactRoute}
           />
         </div>
       </div>
