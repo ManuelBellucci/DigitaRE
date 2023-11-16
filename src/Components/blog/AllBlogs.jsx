@@ -60,7 +60,13 @@ const AllBlogs = () => {
                   tagText={post.tag}
                   title={post.title}
                   src={post.cover}
-                  href={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/blog/${post.title
+                    .toLowerCase()
+                    .replace(/[^\w\s]/gi, '')
+                    .replace(/\s+/g, '-')
+                    .replace(/-{2,}/g, '')
+                    .trim()
+                }`}
                   alt='Post cover image'
                 />
                 )
@@ -69,7 +75,12 @@ const AllBlogs = () => {
                   key={index}
                   tagText={post.tag}
                   title={post.title}
-                  href={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/blog/${post.title
+                    .toLowerCase()
+                    .replace(/[^\w\s]/gi, '')
+                    .replace(/\s+/g, '-')
+                    .replace(/-{2,}/g, '')
+                    .trim()}`}
                 />
                 )
           ))}
