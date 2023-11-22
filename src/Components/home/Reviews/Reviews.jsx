@@ -1,42 +1,33 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReviewsContainer from './utils/containers/ReviewsContainer'
-import Card from './utils/cards/Card'
+import CarouselControls from './utils/carousel/CarouselControls'
+import ReviewCard from './utils/cards/ReviewCard'
 import data from '../../../data/reviews.json'
-import { Slide } from 'react-awesome-reveal'
 
 const Reviews = () => {
-  const { title } = data
   const { first, second, third, fourth } = data
   const reviews = [first, second, third, fourth]
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length)
-    }, 3000)
+  const goToPrevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length)
+  }
 
-    return () => {
-      clearInterval(intervalId)
-    }
-  }, [currentIndex, reviews.length])
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length)
+  }
 
   return (
-    <ReviewsContainer>
-      <Slide direction='right' triggerOnce>
-        <div className='flex flex-col w-full items-center gap-14 shrink-0'>
-          <h3 className='flex-1 text-xl md:text-2xl lg:text-3xl font-bold self-center'>
-            {title}
-          </h3>
-          <Card
-            author={reviews[currentIndex].author}
-            business={reviews[currentIndex].business}
-            content={reviews[currentIndex].content}
-            profilePicSrc={reviews[currentIndex].profilePicSrc}
-          />
-        </div>
-      </Slide>
-    </ReviewsContainer>
+    <div id='controls-carousel' className='relative w-full' data-carousel='static'>
+      <ReviewsContainer>
+        <ReviewCard review={reviews[currentIndex]} />
+      </ReviewsContainer>
+      <CarouselControls
+        onPrev={goToPrevSlide}
+        onNext={goToNextSlide}
+      />
+    </div>
   )
 }
 
