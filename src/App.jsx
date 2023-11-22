@@ -1,23 +1,36 @@
-import Hero from './Components/home/Hero/Hero'
-import FirstSection from './Components/home/FirstSection/FirstSection'
-import SecondSection from './Components/home/SecondSection/SecondSection'
-import ThirdSection from './Components/home/ThirdSection/ThirdSection'
-import Reviews from './Components/home/Reviews/Reviews'
+import Hero from './components/home/Hero/Hero'
+import FirstSection from './components/home/FirstSection/FirstSection'
+import SecondSection from './components/home/SecondSection/SecondSection'
+import ThirdSection from './components/home/ThirdSection/ThirdSection'
+import Reviews from './components/home/Reviews/Reviews'
 import { Fade } from 'react-awesome-reveal'
 import { FloatButton } from 'antd'
-import Contact from './Components/home/Contact/Contact'
+import Contact from './components/home/Contact/Contact'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import AllBlogs from './Components/blog/AllBlogs'
-import SingleBlog from './Components/blog/SingleBlog'
-import Nav from './Components/home/Navbar/Navbar'
+import AllBlogs from './components/blog/AllBlogs'
+import SingleBlog from './components/blog/SingleBlog'
+import Nav from './components/home/Navbar/Navbar'
+import Footer from './components/home/Footer/Footer'
+import NotFound from './components/NotFound'
+import Admin from './components/admin/Admin'
 
 function App () {
   return (
     <Router>
       <Routes>
-        <Route path='/contatti' element={<><Nav isContactRoute /><Contact /></>} />
         <Route path='/blog' element={<AllBlogs />} />
         <Route path='/blog/:slug' element={<SingleBlog />} />
+        <Route path='*' element={<NotFound />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route
+          path='/contatti'
+          element={
+            <>
+              <Nav isContactRoute />
+              <Contact />
+            </>
+          }
+        />
         <Route
           path='/'
           element={
@@ -37,9 +50,10 @@ function App () {
               </Fade>
               <Fade triggerOnce>
                 <Contact />
+                <Footer />
               </Fade>
             </>
-          }
+            }
         />
       </Routes>
       <FloatButton.BackTop className='hover:bg-myGray' />
