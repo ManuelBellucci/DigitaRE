@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import CTAButton from '../../../commons/CTAButton'
-import CTAButtonWithLink from '../../../commons/CTAButtonWithLink'
+import CTA from '../../../commons/CTA'
+import CTAWithLink from '../../../commons/CTAWithLink'
 
 const NavLinks = ({ blogPath, isBlogRoute }) => {
   const isContactRoute = window.location.pathname === '/contatti'
@@ -20,10 +20,10 @@ const NavLinks = ({ blogPath, isBlogRoute }) => {
           {!isContactRoute && (
             isBlogRoute
               ? (
-                <CTAButtonWithLink href='/contatti' text='CONTATTI' />
+                <CTAWithLink href='/contatti' text='CONTATTI' />
                 )
               : (
-                <CTAButton href='#contatti' text='CONTATTI' />
+                <CTA href='#contatti' text='CONTATTI' />
                 )
           )}
         </li>

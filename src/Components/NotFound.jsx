@@ -1,4 +1,4 @@
-import CTAButtonWithLink from './commons/CTAWithLink'
+import CTAWithLink from './commons/CTAWithLink'
 
 const NotFound = () => {
   return (
@@ -9,7 +9,7 @@ const NotFound = () => {
           <h1 className='mb-2 text-5xl tracking-tight font-extrabold lg:text-9xl text-primary'>404</h1>
           <p className='text-xl tracking-tight font-bold text-white md:text-4xl '>Something's missing.</p>
           <p className='text-lg font-light text-myGray '>Sorry, we can't find that page. You'll find lots to explore on the home page. </p>
-          <CTAButtonWithLink href='/' text='Back to homepage' className='mt-4' />
+          <CTAWithLink href='/' text='Back to homepage' className='mt-4' />
         </div>
       </div>
     </section>
