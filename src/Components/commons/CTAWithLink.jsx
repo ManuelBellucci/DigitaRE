@@ -1,14 +1,16 @@
-const CTAButton = ({ href, text, className, onClick }) => {
+import { Link } from 'react-router-dom'
+
+const CTAWithLink = ({ href, text, className, onClick }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={`border font-bold border-primary px-6 py-[10px] rounded-3xl hover:bg-primary hover:text-tag transition-all ease-in ${className}`}
       onClick={onClick}
       aria-label={text}
     >
       {text}
-    </a>
+    </Link>
   )
 }
 
-export default CTAButton
+export default CTAWithLink
