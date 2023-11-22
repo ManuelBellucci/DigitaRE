@@ -3,9 +3,12 @@ import Modal from 'react-modal'
 import { useState, useEffect } from 'react'
 import CTA from '../../commons/CTA'
 import Pagination from '../../commons/Pagination'
+import BlogFilter from '../../blog/utils/BlogFilter'
 
 const PostListModal = ({ isOpen, onRequestClose }) => {
   const [posts, setPosts] = useState([])
+  const [titleFilter, setTitleFilter] = useState('')
+  const [categoryFilter, setCategoryFilter] = useState('nofilter')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
@@ -38,11 +41,17 @@ const PostListModal = ({ isOpen, onRequestClose }) => {
     console.log('Edit post with id:', postId)
   }
 
-  const totalPages = Math.ceil(posts.length / postsPerPage)
+  const filteredPosts = posts.filter(post => {
+    const titleMatches = post.title.toLowerCase().includes(titleFilter.toLowerCase())
+    const categoryMatches = categoryFilter === 'nofilter' || post.tag === categoryFilter
+
+    return titleMatches && categoryMatches
+  })
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
 
   const indexOfLastPost = currentPage * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost)
 
   const hasPrevPage = currentPage > 1
   const hasNextPage = currentPage < totalPages
@@ -59,12 +68,19 @@ const PostListModal = ({ isOpen, onRequestClose }) => {
     }
   }
 
+
   return (
-    <Modal
+      <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel='Lista di post'
-    >
+      >
+      <BlogFilter 
+        titleFilter={titleFilter}
+        setTitleFilter={setTitleFilter}
+        categoryFilter={categoryFilter}
+        setCategoryFilter={setCategoryFilter}
+      />
       <h2>Lista dei post</h2>
       {loading && <p>Loading...</p>}
       {error && <p>Error fetching posts</p>}
