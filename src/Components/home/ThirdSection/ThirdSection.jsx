@@ -6,7 +6,7 @@ import ThirdSectionContainer from './utils/containers/ThirdSectionContainer'
 import data from '../../../data/thirdsection.json'
 import { Slide, Zoom } from 'react-awesome-reveal'
 import React, { useEffect, useState } from 'react'
-import CTAButtonWithLink from '../../commons/CTAButtonWithLink'
+import CTAWithLink from '../../commons/CTAWithLink'
 
 const ThirdSection = () => {
   const { title, description, button } = data
@@ -60,7 +60,7 @@ const ThirdSection = () => {
             <div className='text-myGray text-sm md:text-base lg:text-lg text-justify'>
               {description}
             </div>
-            <CTAButtonWithLink
+            <CTAWithLink
               href={href}
               text={text}
               className='text-base md:text-lg lg:text-xl'
