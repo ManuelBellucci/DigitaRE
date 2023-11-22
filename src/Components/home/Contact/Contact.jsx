@@ -8,7 +8,7 @@ import data from '../../../data/contact.json'
 const Contact = () => {
   const { title, subtitle } = data
   //   // email regex
-  //   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+  //  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
   //   // international phone number regex
   //   const phoneRegex = /^\+[1-9]\d{1,14}$/
 
@@ -45,13 +45,13 @@ const Contact = () => {
   //           // send data to backend
   //           console.log('sending data to backend...')
   //         } else {
-  //           alert('Inserisci un numero di telefono valido')
+  //           window.alert('Inserisci un numero di telefono valido')
   //         }
   //       } else {
-  //         alert('Inserisci una email valida')
+  //         window.alert('Inserisci una email valida')
   //       }
   //     } else {
-  //       alert('Compila tutti i campi')
+  //       window.alert('Compila tutti i campi')
   //     }
   //   }
 
