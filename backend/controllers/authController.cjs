@@ -1,16 +1,8 @@
-const crypto = require('crypto')
-const jwt = require('jsonwebtoken')
 const secret = require('../../config/config.cjs').secret
+exports.secret = secret
 const User = require('../models/userModel.cjs')
-
-function validatePassword (password, salt, storedHash) {
-  const hash = crypto.pbkdf2Sync(password, salt, 10000, 512, 'sha512').toString('hex')
-  return storedHash === hash
-}
-
-function generateToken (user) {
-  return jwt.sign({ userId: user._id, username: user.username }, secret, { expiresIn: '1h' })
-}
+const { validatePassword } = require('./validatePassword.cjs')
+const { generateToken } = require('./generateToken.cjs')
 
 async function login (req, res) {
   const { username, password } = req.body
