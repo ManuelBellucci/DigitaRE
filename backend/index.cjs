@@ -6,6 +6,7 @@ const postRouter = require('./routes/posts.cjs')
 const userRouter = require('./routes/users.cjs')
 const { verifyToken } = require('./middleware/authentication.cjs')
 const { login } = require('./controllers/authController.cjs')
+require('dotenv').config()
 
 // inizializzazione dell'app
 const app = express()
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 3001
 
 // collegamento al database MongoDB
 mongoose.connect(
-  'mongodb+srv://manuelbellucci:Manu.2002@digitare.jhsk8u2.mongodb.net/?retryWrites=true&w=majority'
+  process.env.MONGODB_URI
 )
 const db = mongoose.connection
 
