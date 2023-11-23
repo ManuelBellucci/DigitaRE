@@ -8,10 +8,10 @@ import { FloatButton } from 'antd'
 import Contact from './components/home/Contact/Contact'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AllBlogs from './components/blog/AllBlogs'
-import SingleBlog from './components/blog/SingleBlog'
+import SingleBlog from './components/blog/utils/SingleBlog'
 import Nav from './components/home/Navbar/Navbar'
 import Footer from './components/home/Footer/Footer'
-import NotFound from './components/NotFound'
+import NotFound from './components/404/NotFound'
 import Admin from './components/admin/Admin'
 
 function App () {
@@ -56,7 +56,7 @@ function App () {
             }
         />
       </Routes>
-      <FloatButton.BackTop className='hover:bg-myGray' />
+      <FloatButton.BackTop className='hover:bg-primary transition-all ease-in' />
     </Router>
   )
 }
