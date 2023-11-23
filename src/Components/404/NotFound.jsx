@@ -1,4 +1,4 @@
-import CTAWithLink from './commons/CTAWithLink'
+import CTAWithLink from '../commons/CTAWithLink'
 
 const NotFound = () => {
   return (

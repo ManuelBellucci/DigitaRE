@@ -1,10 +1,11 @@
 /* eslint-disable space-unary-ops */
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import Nav from '../home/Navbar/Navbar'
-import Tag from '../home/ThirdSection/utils/cards/Tag'
-import Loader from '../commons/Loader'
-import NotFound from '../NotFound'
+import Nav from '../../home/Navbar/Navbar'
+import Tag from '../../home/ThirdSection/utils/cards/Tag'
+import Loader from '../../commons/Loader'
+import NotFound from '../../404/NotFound'
+import ErrorMessage from '../../commons/ErrorMessage'
 
 const SingleBlog = () => {
   const { slug } = useParams()
@@ -39,7 +40,7 @@ const SingleBlog = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>
+    return <ErrorMessage text={error.message} />
   }
 
   if (!post) {
@@ -59,12 +60,12 @@ const SingleBlog = () => {
         )}
         <div className='flex flex-col gap-10'>
           <header className='flex flex-col items-center'>
-            <h1 className='text-3xl font-bold mb-2'>{post.title}</h1>
-            <div className='flex gap-4 text-myGray'>
+            <h1 className='text-3xl font-bold mb-2 text-center'>{post.title}</h1>
+            <div className='flex gap-4 text-myGray items-center'>
               <span>{new Date(post.date).toLocaleDateString()}</span>
               <Tag tagText={post.tag} />
-              <span>{`Tempo di lettura: ${post.readTime.value} ${post.readTime.unit}`}</span>
             </div>
+            <span className='text-myGray'>{`Tempo di lettura: ${post.readTime.value} ${post.readTime.unit}`}</span>
           </header>
           <p className='text-myGray text-base md:text-lg lg:text-xl text-justify'>
             {post.body}
