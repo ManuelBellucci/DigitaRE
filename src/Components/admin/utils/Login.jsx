@@ -4,9 +4,9 @@ import CTA from '../../commons/CTA'
 const Login = ({ username, setUsername, password, setPassword, handleLogin }) => {
   return (
     <>
-      <h1 className='text-4xl'>Admin login:</h1>
-      <span className='text-sm text-myGray mb-6'>Hint: admin - epicodebenchmark</span>
-      <form className='flex flex-col'>
+      <h1 className='text-4xl '>ADMIN LOGIN</h1>
+      <span className='text-sm text-myGray mb-10'>Hint: admin - epicodebenchmark</span>
+      <form className='flex flex-col border border-1 p-4 rounded'>
         <label className='self-center mb-1'>Username:</label>
         <input
           type='text'
