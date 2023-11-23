@@ -8,10 +8,16 @@ const Pagination = ({ currentPage, totalPages, handlePrevPage, handleNextPage, p
   return (
     <div className='flex justify-center gap-2'>
       {hasPrevPage && (
-        <CTA onClick={handlePrevPage} text='<' className='text-md cursor-pointer font-extrabold rounded-full px-1 py-1' />
+        <CTA
+          onClick={handlePrevPage} className='text-md cursor-pointer font-extrabold rounded-full'
+          text='<'
+        />
       )}
       {hasNextPage && (
-        <CTA onClick={handleNextPage} className='text-md cursor-pointer font-extrabold rounded-full px-1 py-1' text='>' />
+        <CTA
+          onClick={handleNextPage} className='text-md cursor-pointer font-extrabold rounded-full'
+          text='>'
+        />
       )}
     </div>
   )

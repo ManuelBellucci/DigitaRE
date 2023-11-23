@@ -3,6 +3,8 @@ import Modal from 'react-modal'
 import { useState, useEffect } from 'react'
 import CTA from '../../commons/CTA'
 import Pagination from '../../commons/Pagination'
+import Loader from '../../commons/Loader'
+import ErrorMessage from '../../commons/ErrorMessage'
 import BlogFilter from '../../blog/utils/BlogFilter'
 
 const PostListModal = ({ isOpen, onRequestClose }) => {
@@ -68,30 +70,40 @@ const PostListModal = ({ isOpen, onRequestClose }) => {
     }
   }
 
-
   return (
-      <Modal
+    <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel='Lista di post'
-      >
-      <BlogFilter 
+    >
+      <BlogFilter
         titleFilter={titleFilter}
         setTitleFilter={setTitleFilter}
         categoryFilter={categoryFilter}
         setCategoryFilter={setCategoryFilter}
       />
       <h2>Lista dei post</h2>
-      {loading && <p>Loading...</p>}
-      {error && <p>Error fetching posts</p>}
+      {loading && <Loader />}
+      {error && <ErrorMessage text='Errore nel caricamento dei post' />}
       {!loading && !error && (
-        <div className='text-black flex flex-col gap-4 p-10'>
+        <div className='text-black flex flex-col gap-4 p-2 sm:p-4 md:p-6 lg:p-10'>
           {currentPosts.map((post) => (
-            <div key={String(post._id)} className='flex gap-4 items-center justify-between'>
-              <span>{post.title}</span>
+            <div
+              key={String(post._id)}
+              className='flex gap-4 items-center justify-between'
+            >
+              <span className='text-sm md:text-base'>
+                {post.title}
+              </span>
               <div className='flex gap-3'>
-                <CTA text='Delete post' onClick={() => handleDelete(post._id)} className='text-xs rounded-md cursor-pointer' />
-                <CTA text='Edit post' onClick={() => handleEdit(post._id)} className='text-xs rounded-md cursor-pointer' />
+                <CTA
+                  text='Delete post'
+                  onClick={() => handleDelete(post._id)} className='text-xs rounded-md cursor-pointer'
+                />
+                <CTA
+                  text='Edit post'
+                  onClick={() => handleEdit(post._id)} className='text-xs rounded-md cursor-pointer'
+                />
               </div>
             </div>
           ))}
