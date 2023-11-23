@@ -1,3 +1,5 @@
+> **&#9432;** Progetto non finalizzato per lavoro e assenza di tempo, completato circa al 90% delle funzionalità.
+
 ## create from root /config/config.cjs and add `module.exports = { secret: '8852451a5121a0ff2aee4d9af8d69fceaf37d306fdcdf54119d841efe327d1cc'}`
 
 ## create .env and add `MONGODB_URI='mongodb+srv://manuelbellucci:Manu.2002@digitare.jhsk8u2.mongodb.net/?retryWrites=true&w=majority'`
@@ -30,5 +32,4 @@
     - StandardJS (linter)
 
 
-> **&#9432;** Progetto non finalizzato per lavoro e assenza di tempo, completato circa al 90% delle funzionalità. 
 
