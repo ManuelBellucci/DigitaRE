@@ -82,4 +82,32 @@ router.delete('/:slug', async (req, res) => {
   }
 })
 
+router.put('/:slug', async (req, res) => {
+  const slug = req.params.slug
+
+  try {
+    const { title, body, date, tag, cover, readTime } = req.body
+
+    if (!title || !body) {
+      return res.status(400).json({ error: 'I parametri title e body sono obbligatori' })
+    }
+
+    const decodedBody = decodeURIComponent(body)
+
+    const updatedPost = await Post.findOneAndUpdate(
+      { slug },
+      { title, body: decodedBody, date, tag, cover, readTime },
+      { new: true }
+    )
+
+    if (!updatedPost) {
+      res.status(404).json({ error: `Il post con lo slug ${slug} non è stato trovato` })
+    } else {
+      res.json(updatedPost)
+    }
+  } catch (error) {
+    handleErrors(res, error, 'Modifica del post')
+  }
+})
+
 module.exports = router
