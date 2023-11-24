@@ -6,12 +6,12 @@ const PostItem = ({ post, handleDelete, handleEdit }) => (
     <span className='text-sm md:text-base w-[50%] truncate'>{post.title}</span>
     <div className='flex gap-3 w-[50%] justify-end'>
       <CTA
-        text='Elimina'
+        text='Elimina (to do)'
         onClick={() => handleDelete(post._id)}
         className='text-xs rounded-md cursor-pointer'
       />
       <CTA
-        text='Modifica'
+        text='Modifica (to do)'
         onClick={() => handleEdit(post._id)}
         className='text-xs rounded-md cursor-pointer'
       />
