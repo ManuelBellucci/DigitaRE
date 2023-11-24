@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-pascal-case */
-import Modal from 'react-modal'
 import { useState, useEffect } from 'react'
 import Pagination from '../../commons/Pagination'
 import Loader from '../../commons/Loader'
 import ErrorMessage from '../../commons/ErrorMessage'
 import BlogFilter from '../../blog/utils/BlogFilter'
 import PostItem from './PostItem'
+import ReactModal from 'react-modal'
 
 const PostListModal = ({ isOpen, onRequestClose }) => {
   const [posts, setPosts] = useState([])
@@ -93,7 +93,7 @@ const PostListModal = ({ isOpen, onRequestClose }) => {
   }
 
   return (
-    <Modal
+    <ReactModal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel='Lista di post'
@@ -104,16 +104,15 @@ const PostListModal = ({ isOpen, onRequestClose }) => {
         categoryFilter={categoryFilter}
         setCategoryFilter={setCategoryFilter}
       />
-      <h2>Lista dei post</h2>
       {loading && <Loader />}
       {error && <ErrorMessage text='Errore nel caricamento dei post' />}
       {!loading && !error && (
-        <div className='text-black flex flex-col gap-4 p-2 sm:p-4 md:p-6 lg:p-10'>
+        <div className='text-black flex flex-col gap-14 p-2 sm:p-4 md:p-6 lg:p-10 mt-10'>
           {renderPostItems()}
           {renderPagination()}
         </div>
       )}
-    </Modal>
+    </ReactModal>
   )
 }
 
