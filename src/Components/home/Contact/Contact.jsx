@@ -1,3 +1,4 @@
+/* eslint-disable space-unary-ops */
 import React, { useState } from 'react'
 import { Slide } from 'react-awesome-reveal'
 import Form from './utils/Form'
@@ -12,60 +13,65 @@ const Contact = () => {
     name: '',
     surname: '',
     email: '',
-    phone: '',
-    message: ''
+    phone: ''
   })
 
   const [errors, setErrors] = useState({})
 
-  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-  const phoneRegex = /^\+?[0-9]+$/
+  const validatePhone = (value) => {
+    const phoneRegex = /^[0-9]{9,12}$/
+    return phoneRegex.test(value)
+  }
+  const validateForm = () => {
+    let valid = true
+    const newErrors = {}
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-
-    setErrors({
-      ...errors,
-      [e.target.name]: ''
-    })
+    if (!validatePhone(formData.phone)) {
+      newErrors.phone = 'Inserisci un numero di telefono valido'
+      valid = false
+    }
+    setErrors(newErrors)
+    return valid
   }
 
-  const validateField = (fieldName, value, errorMessage) => {
-    if (!value.trim()) {
-      setErrors({
-        ...errors,
-        [fieldName]: errorMessage
-      })
-      return false
-    }
-    return true
+  const handleChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value
+    }))
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [e.target.name]: ''
+    }))
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const { name, surname, email, phone, message } = formData
+    if (!validateForm()) {
+      return
+    }
 
-    const isEmailValid = validateField('email', email, emailRegex, 'Inserisci una email valida')
-    const isPhoneValid = validateField('phone', phone, phoneRegex, 'Inserisci un numero di telefono valido')
-
-    if (name && surname && isEmailValid && isPhoneValid && message) {
-      console.log('Sending data to backend...', formData)
-
-      setFormData({
-        name: '',
-        surname: '',
-        email: '',
-        phone: '',
-        message: ''
+    try {
+      const response = await fetch('http://localhost:3001/api/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       })
-    } else {
-      window.alert('TODO')
+
+      if (!response.ok) {
+        throw new Error('Errore durante l\'invio dei dati')
+      }
+
+      window.alert('Dati inviati correttamente')
+    } catch (error) {
+      console.error('Errore durante l\'invio dei dati:', error)
     }
   }
+
   return (
     <section className='bg-[#110F0F] flex w-full px-10 lg:px-[70px] pt-20 pb-[70px] justify-center items-center' id='contatti'>
       <Slide triggerOnce direction='up'>

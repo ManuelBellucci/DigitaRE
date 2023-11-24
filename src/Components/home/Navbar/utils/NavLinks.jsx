@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import { Link } from 'react-router-dom'
 import CTA from '../../../commons/CTA'
 import CTAWithLink from '../../../commons/CTAWithLink'

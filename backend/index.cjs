@@ -4,6 +4,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const postRouter = require('./routes/posts.cjs')
 const userRouter = require('./routes/users.cjs')
+const contactRouter = require('./routes/contacts.cjs')
 const { verifyToken } = require('./middleware/authentication.cjs')
 const { login } = require('./controllers/authController.cjs')
 require('dotenv').config()
@@ -46,6 +47,9 @@ app.use('/api/users', userRouter)
 
 // route per l'autenticazione
 app.post('/api/login', login)
+
+// route per i contatti
+app.use('/api/contacts', contactRouter)
 
 // server in ascolto
 app.listen(PORT, () => {
