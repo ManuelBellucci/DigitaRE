@@ -3,16 +3,18 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AdminPanel from './utils/AdminPanel'
 import Login from './utils/Login'
-import handleLogin from './utils/handleLogin'
-import handleLogout from './utils/handleLogout'
+import handleLogin from '../../functions/handleLogin'
+import handleLogout from '../../functions/handleLogout'
 import AdminContainer from './utils/AdminContainer'
 import PostListModal from './utils/PostListModal'
+import LeadListModal from './utils/LeadListModal'
 
 const Admin = () => {
   const [authorized, setAuthorized] = useState(false)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [isPostListModalOpen, setPostListModalOpen] = useState(false)
+  const [isLeadListModalOpen, setLeadListModalOpen] = useState(false)
   const navigate = useNavigate()
 
   const handleLoginClick = () => handleLogin(username, password, setAuthorized, window.localStorage)
@@ -21,13 +23,17 @@ const Admin = () => {
   const openPostListModal = () => setPostListModalOpen(true)
   const closePostListModal = () => setPostListModalOpen(false)
 
+  const openLeadListModal = () => setLeadListModalOpen(true)
+  const closeLeadListModal = () => setLeadListModalOpen(false)
+
   return (
     <AdminContainer>
       {authorized
         ? (
           <>
-            <AdminPanel handleLogout={handleLogoutClick} openPostListModal={openPostListModal} />
+            <AdminPanel handleLogout={handleLogoutClick} openPostListModal={openPostListModal} openLeadListModal={openLeadListModal} />
             <PostListModal isOpen={isPostListModalOpen} onRequestClose={closePostListModal} />
+            <LeadListModal isOpen={isLeadListModalOpen} onRequestClose={closeLeadListModal} />
           </>
           )
         : (
