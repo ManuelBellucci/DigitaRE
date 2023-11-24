@@ -1,5 +1,7 @@
+// imports
 import { useEffect, useState } from 'react'
 
+// custom hook per fetchare i post del blog
 const useFetchBlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState([])
 

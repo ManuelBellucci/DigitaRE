@@ -1,3 +1,4 @@
+// imports
 import SecondSectionContentWrapper from './utils/SecondSectionContentWrapper'
 import SecondSectionImage from './utils/SecondSectionImage'
 import data from '../../../data/secondsection.json'

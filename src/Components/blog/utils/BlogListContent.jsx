@@ -1,3 +1,4 @@
+// imports
 import React from 'react'
 import CardWithImage from '../../home/ThirdSection/utils/cards/CardWithImage'
 import CardWithoutImage from '../../home/ThirdSection/utils/cards/CardWithoutImage'

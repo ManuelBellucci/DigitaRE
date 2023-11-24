@@ -1,3 +1,4 @@
+// imports
 import CardContainer from './utils/cards/CardContainer'
 import Card from './utils/cards/Card'
 import FirstSectionContainer from './utils/containers/FirstSectionContainer'
@@ -6,9 +7,9 @@ import data from '../../../data/firstsection.json'
 import { Slide } from 'react-awesome-reveal'
 
 const FirstSection = () => {
+  // destructuring
   const { title, description } = data.header
   const { first, second, third, fourth, fifth, sixth } = data.cards
-
   const cardData = [first, second, third]
   const cardData2 = [fourth, fifth, sixth]
 

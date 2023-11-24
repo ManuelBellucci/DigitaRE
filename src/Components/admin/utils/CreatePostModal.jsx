@@ -1,9 +1,11 @@
+// imports
 import { useState } from 'react'
 import ReactModal from 'react-modal'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 
-const CreatePostModal = ({ isOpen, onRequestClose, editedPost }) => {
+const CreatePostModal = ({ isOpen, onRequestClose }) => {
+  // states
   const [title, setTitle] = useState('')
   const [tag, setTag] = useState('')
   const [isFeatured, setIsFeatured] = useState(false)
@@ -11,31 +13,38 @@ const CreatePostModal = ({ isOpen, onRequestClose, editedPost }) => {
   const [cover, setCover] = useState('')
   const [content, setContent] = useState('')
 
+  // funzione per gestire il contenuto del quill editor
   const handleQuillChange = (value) => {
     setContent(String(value))
   }
 
+  // funzioni per gestire i cambiamenti dell'input del titolo
   const handleTitleChange = (e) => {
     setTitle(e.target.value)
   }
 
+  // funzioni per gestire i cambiamenti dell'input del tag
   const handleTagChange = (e) => {
     setTag(e.target.value)
   }
 
+  // funzioni per gestire i cambiamenti dell'input del checkbox
   const handleCheckboxChange = (e) => {
     setIsFeatured(e.target.checked)
   }
 
+  // funzioni per gestire i cambiamenti dell'input del read time
   const handleReadTimeChange = (e) => {
     const minutes = parseInt(e.target.value, 10)
     setReadTime(isNaN(minutes) ? 0 : minutes)
   }
 
+  // funzioni per gestire i cambiamenti dell'input della cover
   const handleCoverChange = (e) => {
     setCover(e.target.value)
   }
 
+  // funzione per gestire la submit del form
   const handleSubmit = (e) => {
     e.preventDefault()
     const newPost = {
@@ -48,6 +57,7 @@ const CreatePostModal = ({ isOpen, onRequestClose, editedPost }) => {
     }
     console.log('New post:', newPost)
 
+    // fetch per creare un nuovo post
     fetch('http://localhost:3001/api/posts', {
       method: 'POST',
       headers: {
@@ -59,6 +69,7 @@ const CreatePostModal = ({ isOpen, onRequestClose, editedPost }) => {
       .then((data) => console.log('Success:', data))
       .catch((error) => console.error('Error:', error))
 
+    // resetta i campi del form
     setTitle('')
     setTag('')
     setIsFeatured(false)
@@ -66,6 +77,7 @@ const CreatePostModal = ({ isOpen, onRequestClose, editedPost }) => {
     setCover('')
     setContent('')
 
+    // chiude il modal
     onRequestClose()
   }
 

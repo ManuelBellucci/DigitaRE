@@ -1,4 +1,5 @@
 /* eslint-disable space-unary-ops */
+// imports
 import React, { useState } from 'react'
 import { Slide } from 'react-awesome-reveal'
 import Form from './utils/Form'
@@ -7,21 +8,23 @@ import FormHeader from './utils/FormHeader'
 import data from '../../../data/contact.json'
 
 const Contact = () => {
+  // destructuring e states
   const { title, subtitle } = data
-
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
     email: '',
     phone: ''
   })
-
   const [errors, setErrors] = useState({})
 
+  // funzione per validare tramite regex il numero telefonico
   const validatePhone = (value) => {
     const phoneRegex = /^[0-9]{9,12}$/
     return phoneRegex.test(value)
   }
+
+  // funzione per validare il form passando tutte le eventuali validazioni (potrei aggiungere anche un regex per l'email)
   const validateForm = () => {
     let valid = true
     const newErrors = {}
@@ -34,21 +37,25 @@ const Contact = () => {
     return valid
   }
 
+  // funzione per gestire il cambio dell'evento ed aggiornare formData
   const handleChange = (e) => {
     setFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value
     }))
-
+    // error handling
     setErrors((prevErrors) => ({
       ...prevErrors,
       [e.target.name]: ''
     }))
   }
 
+  // funzione per gestire il submit. Se il form è completo e validato, fa una richiesta fetch al server per fare un POST del contatto
   const handleSubmit = async (e) => {
+    // per evitare il refresh della pagina con il submit del form
     e.preventDefault()
 
+    // gestisco che il form sia valido prima del try..catch
     if (!validateForm()) {
       return
     }

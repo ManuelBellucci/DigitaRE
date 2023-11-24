@@ -1,4 +1,5 @@
 /* eslint-disable space-unary-ops */
+// imports
 import CardWithImage from './utils/cards/CardWithImage'
 import CardWithoutImage from './utils/cards/CardWithoutImage'
 import SubsectionsContainer from './utils/containers/SubsectionsContainer'
@@ -9,10 +10,12 @@ import React, { useEffect, useState } from 'react'
 import CTAWithLink from '../../commons/CTAWithLink'
 
 const ThirdSection = () => {
+  // states e destructuring
   const { title, description, button } = data
   const { href, text } = button
   const [featuredPosts, setFeaturedPosts] = useState([])
 
+  // efetto per ricuperare i post con condizione isFeatured=true
   useEffect(() => {
     const fetchFeaturedPosts = async () => {
       try {
@@ -30,6 +33,7 @@ const ThirdSection = () => {
     fetchFeaturedPosts()
   }, [])
 
+  // funzione per renderizzare una card per featured post in base a se ha cover o meno
   const renderCard = (post, index) => {
     const props = {
       tagText: post.tag,

@@ -1,9 +1,12 @@
 /* eslint-disable react/jsx-pascal-case */
+
+// imports
 import { Link } from 'react-router-dom'
 import CTA from '../../../commons/CTA'
 import CTAWithLink from '../../../commons/CTAWithLink'
 
 const NavLinks = ({ blogPath, isBlogRoute }) => {
+  // costante per definire se ci troviamo in /contatti per modificare i NavLinks in base alla posizione dell'utente
   const isContactRoute = window.location.pathname === '/contatti'
 
   return (

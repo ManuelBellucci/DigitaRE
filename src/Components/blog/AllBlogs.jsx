@@ -1,3 +1,4 @@
+// imports
 import { useState } from 'react'
 import Pagination from '../commons/Pagination'
 import BlogFilter from './utils/BlogFilter'
@@ -7,10 +8,12 @@ import useFetchBlogPosts from './utils/customHooks/useFetchBlogPosts'
 import usePagination from './utils/customHooks/usePagination'
 
 const AllBlogs = () => {
+  // states e customhook
   const blogPosts = useFetchBlogPosts()
   const [titleFilter, setTitleFilter] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('nofilter')
 
+  // funzione per filtrare i post per titolo e categoria
   const filterPosts = () => {
     return blogPosts.filter(post => {
       const titleMatches = post.title.toLowerCase().includes(titleFilter.toLowerCase())
@@ -19,11 +22,13 @@ const AllBlogs = () => {
       return titleMatches && categoryMatches
     })
   }
+  // custom hook per la paginazione
   const { currentPage, totalPages, handlePrevPage, handleNextPage, startIndex, endIndex } = usePagination(
     filterPosts().length,
     6
   )
 
+  // costante per filtrare i currentPosts
   const currentPosts = filterPosts().slice(startIndex, endIndex)
 
   return (

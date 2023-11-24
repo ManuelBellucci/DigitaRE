@@ -1,4 +1,6 @@
 /* eslint-disable space-unary-ops */
+
+// imports
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Nav from '../../home/Navbar/Navbar'
@@ -8,12 +10,14 @@ import NotFound from '../../404/NotFound'
 import ErrorMessage from '../../commons/ErrorMessage'
 
 const SingleBlog = () => {
+  // states e hooks
   const { slug } = useParams()
   const navigate = useNavigate()
   const [post, setPost] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  // efetto per fetchare un post in base allo slug
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -35,18 +39,20 @@ const SingleBlog = () => {
     fetchPost()
   }, [slug, navigate])
 
+  // se il post è in caricamento mostro il loader
   if (loading) {
     return <Loader className='flex justify-center items-center h-screen' />
   }
 
-  if (error) {
-    return <ErrorMessage text={error.message} />
-  }
+  // se c'è un errore mostro il messaggio di errore
+  if (error) { return <ErrorMessage text={error.message} /> }
 
+  // se non c'è post l'utente va in 404
   if (!post) {
     navigate('/404')
     return <NotFound />
   }
+
   return (
     <section className='px-[70px] pb-[70px]'>
       <Nav />

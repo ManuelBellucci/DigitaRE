@@ -1,4 +1,6 @@
 /* eslint-disable react/jsx-pascal-case */
+
+// imports
 import CTA from '../../commons/CTA'
 
 const PostItem = ({ post, handleDelete, handleEdit }) => (

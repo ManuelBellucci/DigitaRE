@@ -1,4 +1,6 @@
 /* eslint-disable react/jsx-pascal-case */
+
+// imports
 import { useState, useEffect } from 'react'
 import Pagination from '../../commons/Pagination'
 import LeadItem from './LeadItem'
@@ -7,12 +9,16 @@ import Loader from '../../commons/Loader'
 import ReactModal from 'react-modal'
 
 const LeadListModal = ({ isOpen, onRequestClose }) => {
+  // states
   const [leads, setLeads] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
+
+  // numero di leads per pagina
   const leadsPerPage = 10
 
+  // funzione per renderizzare i LeadItem
   const renderLeadItems = () => {
     return currentLeads.map((lead) => (
       <LeadItem
@@ -22,6 +28,7 @@ const LeadListModal = ({ isOpen, onRequestClose }) => {
     ))
   }
 
+  // funzione per rendere la paginazione con Pagination
   const renderPagination = () => {
     return (
       <Pagination
@@ -33,6 +40,7 @@ const LeadListModal = ({ isOpen, onRequestClose }) => {
     )
   }
 
+  // effetto per fetchare le lead quando il modale è aperto (isOpen)
   useEffect(() => {
     const fetchLeads = async () => {
       try {
@@ -52,21 +60,26 @@ const LeadListModal = ({ isOpen, onRequestClose }) => {
     }
   }, [isOpen])
 
+  // costante per salvare il numero totale di pagine in base al numero di leads e il num. di leads per pagina
   const totalPages = Math.ceil(leads.length / leadsPerPage)
 
+  // costanti per salvare gli indici
   const indexOfLastLead = currentPage * leadsPerPage
   const indexOfFirstLead = indexOfLastLead - leadsPerPage
+
+  // costanti per salvare le lead in pagina
   const currentLeads = leads.slice(indexOfFirstLead, indexOfLastLead)
 
+  // costanti per sapere se esistono le prev page o next page
   const hasPrevPage = currentPage > 1
   const hasNextPage = currentPage < totalPages
 
+  // funzioni per gestire la navigazione nelle pagine
   const handlePrevPage = () => {
     if (hasPrevPage) {
       setCurrentPage(currentPage - 1)
     }
   }
-
   const handleNextPage = () => {
     if (hasNextPage) {
       setCurrentPage(currentPage + 1)

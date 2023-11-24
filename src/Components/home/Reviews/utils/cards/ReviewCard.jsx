@@ -1,7 +1,11 @@
+// imports
 import Card from './Card'
 import data from '../../../../../data/reviews.json'
+
 const ReviewCard = ({ review }) => {
+  // destructuring
   const { title } = data
+
   return (
     <div className='flex flex-col w-full items-center gap-14 shrink-0'>
       <h3 className='flex-1 text-xl md:text-2xl lg:text-3xl font-bold self-center'>

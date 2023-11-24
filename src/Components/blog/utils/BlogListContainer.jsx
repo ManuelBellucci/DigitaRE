@@ -1,3 +1,4 @@
+// imports
 import Nav from '../../home/Navbar/Navbar'
 
 const BlogListContainer = ({ children }) => (

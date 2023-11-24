@@ -1,3 +1,4 @@
+// imports
 import ImageContainer from './ImageContainer'
 import CardContent from './CardContent'
 

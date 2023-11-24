@@ -1,5 +1,7 @@
+// imports
 import { useState } from 'react'
 
+// custom hook per la paginazione
 const usePagination = (totalItems, itemsPerPage = 10) => {
   const [currentPage, setCurrentPage] = useState(1)
 

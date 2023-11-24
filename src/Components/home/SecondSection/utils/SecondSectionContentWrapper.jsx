@@ -1,4 +1,6 @@
 /* eslint-disable react/jsx-pascal-case */
+
+// imports
 import SecondSectionContent from './SecondSectionContent'
 import CTA from '../../../commons/CTA'
 
