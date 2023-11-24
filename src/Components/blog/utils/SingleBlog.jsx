@@ -65,11 +65,12 @@ const SingleBlog = () => {
               <span>{new Date(post.date).toLocaleDateString()}</span>
               <Tag tagText={post.tag} />
             </div>
-            <span className='text-myGray'>{`Tempo di lettura: ${post.readTime.value} ${post.readTime.unit}`}</span>
+            <span className='text-myGray'>  {post.readTime && `Tempo di lettura: ${post.readTime.value} ${post.readTime.unit}`}</span>
           </header>
-          <p className='text-myGray text-base md:text-lg lg:text-xl text-justify'>
-            {post.body}
-          </p>
+          <div
+            className='text-myGray text-base md:text-lg lg:text-xl text-justify'
+            dangerouslySetInnerHTML={{ __html: post.body }}
+          />
         </div>
       </div>
     </section>
