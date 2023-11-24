@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ReactModal from 'react-modal'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 
-const CreatePostModal = ({ isOpen, onRequestClose }) => {
+const CreatePostModal = ({ isOpen, onRequestClose, editedPost }) => {
   const [title, setTitle] = useState('')
   const [tag, setTag] = useState('')
   const [isFeatured, setIsFeatured] = useState(false)
@@ -12,7 +12,7 @@ const CreatePostModal = ({ isOpen, onRequestClose }) => {
   const [content, setContent] = useState('')
 
   const handleQuillChange = (value) => {
-    setContent(value)
+    setContent(String(value))
   }
 
   const handleTitleChange = (e) => {
@@ -36,7 +36,8 @@ const CreatePostModal = ({ isOpen, onRequestClose }) => {
     setCover(e.target.value)
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     const newPost = {
       title,
       tag,
@@ -140,7 +141,7 @@ const CreatePostModal = ({ isOpen, onRequestClose }) => {
             ]
           }}
         />
-        <button type='button' onClick={handleSubmit}>
+        <button type='submit' onClick={handleSubmit}>
           Submit
         </button>
       </form>
