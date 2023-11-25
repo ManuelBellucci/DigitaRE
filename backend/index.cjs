@@ -45,11 +45,11 @@ app.use('/api/posts', postRouter)
 // route per gli utenti
 app.use('/api/users', userRouter)
 
-// route per l'autenticazione
-app.post('/api/login', login)
-
 // route per i contatti
 app.use('/api/contacts', contactRouter)
+
+// route per l'autenticazione
+app.post('/api/login', login)
 
 // server in ascolto
 app.listen(PORT, () => {

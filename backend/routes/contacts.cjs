@@ -1,9 +1,11 @@
 /* eslint-disable space-unary-ops */
+
+// imports
 const express = require('express')
 const router = express.Router()
 const Contact = require('../models/contactModel.cjs')
 
-// GET all contacts
+// GET | recupero tutti i contatti
 router.get('/', async (req, res) => {
   try {
     const contacts = await Contact.find()
@@ -13,8 +15,9 @@ router.get('/', async (req, res) => {
   }
 })
 
-// GET one contact
+// GET | recupero un contatto
 router.get('/:id', async (req, res) => {
+  // recupero il contatto con l'id specificato
   try {
     const contact = await Contact.findById(req.params.id)
     res.json(contact)
@@ -23,14 +26,16 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-// POST create new contact
+// POST | creare un nuovo contatto
 router.post('/', async (req, res) => {
+  // creo un nuovo contatto con i dati ricevuti dalla richiesta
   const contact = new Contact({
     name: req.body.name,
     surname: req.body.surname,
     email: req.body.email,
     phone: req.body.phone
   })
+  // salvo il contatto nel database
   try {
     const newContact = await contact.save()
     res.status(201).json(newContact)
